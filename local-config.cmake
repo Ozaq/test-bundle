@@ -1,0 +1,1 @@
+opensuse131-local-config.cmake
