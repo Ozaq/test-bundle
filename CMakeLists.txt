@@ -1,6 +1,6 @@
 cmake_minimum_required( VERSION 2.8.4 FATAL_ERROR )
 
-include( local-config.cmake OPTIONAL )
+include( ${INCLUDE_CONFIG}-local-config.cmake OPTIONAL )
 
 set( CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_CURRENT_SOURCE_DIR}/ecbuild/cmake;${CMAKE_MODULE_PATH}" )
 
@@ -15,7 +15,7 @@ ecbuild_bundle( PROJECT fdb      STASH "mars/fdb_vintage" TAG    4.6.7   )
 ecbuild_bundle( PROJECT libemos  STASH "mars/libemos"     TAG    4.0.0   )
 ecbuild_bundle( PROJECT eckit    STASH "ecsdk/eckit"      TAG    0.8.0   )
 ecbuild_bundle( PROJECT odb_api  STASH "odb/odb_api"      TAG    0.10.2  )
-ecbuild_bundle( PROJECT client   STASH "mars/client"      BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT client   STASH "mars/client"      TAG    6.6.0   )
 
 ecbuild_bundle_finalize()
 
