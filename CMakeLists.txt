@@ -11,7 +11,7 @@ project( MarsClient C CXX )
 ecbuild_bundle_initialize()
 
 ecbuild_bundle( PROJECT grib_api STASH "grib/grib_api"    TAG    1.13.0  )
-ecbuild_bundle( PROJECT fdb      STASH "mars/fdb_vintage" TAG    4.6.7   )
+# ecbuild_bundle( PROJECT fdb      STASH "mars/fdb_vintage" TAG    4.6.7   )
 ecbuild_bundle( PROJECT libemos  STASH "mars/libemos"     TAG    4.0.0   )
 ecbuild_bundle( PROJECT eckit    STASH "ecsdk/eckit"      TAG    0.8.0   )
 ecbuild_bundle( PROJECT odb_api  STASH "odb/odb_api"      TAG    0.10.2  )
