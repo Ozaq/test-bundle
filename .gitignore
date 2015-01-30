@@ -6,4 +6,4 @@ libemos
 client
 odb_api
 server
-*-local-config.cmake
+build
