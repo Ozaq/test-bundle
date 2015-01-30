@@ -1,0 +1,9 @@
+ecbuild
+eckit
+grib_api
+fdb
+libemos
+client
+odb_api
+server
+*-local-config.cmake
