@@ -6,9 +6,11 @@ set( CMAKE_Fortran_COMPILER_INIT  gfortran )
 
 set( CMAKE_INSTALL_PREFIX "/var/tmp/matq/install/MarsClient" )
 
+set( ENABLE_TESTS OFF CACHE INTERNAL "" )
+
 # grib_api
 # needed only to run from build tree
-set( GRIB_API_SHARE "/usr/local/apps/grib_api/1.12.3" )
+set( GRIB_API_SHARE "/usr/local/apps/grib_api/1.12.3/GNU/4.8.1/share/grib_api" )
 set( GRIB_API_DEFINITION_PATH "${GRIB_API_SHARE}/definitions" )
 set( GRIB_API_SAMPLES_PATH    "${GRIB_API_SHARE}/samples" )
 
