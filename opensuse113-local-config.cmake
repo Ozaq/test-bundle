@@ -18,9 +18,7 @@ set( BUILD_IFSIO OFF )
 set( FDB_CONF_FILE "/usr/local/apps/fdb/etc/Config" )
 
 # libemos
-# set( LOCAL_TABLE_PATH "/usr/local/apps/libemos/tables/bufr/text/000401" )
-set( ENABLE_INSTALL_TABLES OFF )
-
-set( ENABLE_FORTRAN90 OFF )
-set( ENABLE_FORTRAN OFF )
-set( WITH_PGI_FORTRAN ON )
+set( ENABLE_INSTALL_TABLES OFF CACHE INTERNAL "" )
+set( ENABLE_FORTRAN90 OFF CACHE INTERNAL "" )
+set( ENABLE_FORTRAN   OFF CACHE INTERNAL "" )
+set( WITH_PGI_FORTRAN ON  CACHE INTERNAL "" )
