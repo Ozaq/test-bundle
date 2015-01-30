@@ -18,4 +18,4 @@ set( FDB_CONF_FILE "/usr/local/apps/fdb/etc/Config" )
 
 # libemos
 # set( LOCAL_TABLE_PATH "/usr/local/apps/libemos/tables/bufr/text/000401" )
-set( ENABLE_INSTALL_TABLES OFF )
+set( ENABLE_INSTALL_TABLES OFF CACHE INTERNAL "" )
