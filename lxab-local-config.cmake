@@ -6,7 +6,7 @@ set( CMAKE_C_COMPILER_INIT        gcc )
 set( CMAKE_CXX_COMPILER_INIT      g++ )
 set( CMAKE_Fortran_COMPILER_INIT  gfortran )
 
-set( ENABLE_TESTS OFF CACHE INTERNAL "" )
+set( BOOST_ROOT "/usr/local/apps/boost/1.53.0/" ) # for unit tests
 
 # grib_api
 set( GRIB_API_SHARE "/usr/local/apps/grib_api/1.12.3/GNU/4.8.1/share/grib_api" )
