@@ -4,7 +4,7 @@ eckit
 grib_api
 fdb
 libemos
-client
+mars-client
 odb_api
-server
+mars-server
 build
