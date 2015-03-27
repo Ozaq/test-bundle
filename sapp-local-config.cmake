@@ -6,9 +6,4 @@ set( CMAKE_C_COMPILER_INIT        gcc )
 set( CMAKE_CXX_COMPILER_INIT      g++ )
 set( CMAKE_Fortran_COMPILER_INIT  gfortran )
 
-# grib_api
-set( GRIB_API_SHARE "/usr/local/apps/grib_api/1.12.3/share/grib_api" )
-set( GRIB_API_DEFINITION_PATH "${GRIB_API_SHARE}/definitions" )
-set( GRIB_API_SAMPLES_PATH    "${GRIB_API_SHARE}/samples" )
-
 set( ENABLE_JPG OFF CACHE INTERNAL "" ) # temporary: grib_api 1.13.0 cnanot build with cmake against Jasper when is installed in non-system location

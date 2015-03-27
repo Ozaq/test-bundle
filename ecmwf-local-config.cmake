@@ -1,6 +1,6 @@
 # general
 
-set( CMAKE_BUILD_TYPE             Production )
+set( CMAKE_BUILD_TYPE     Production )
 
 set( CMAKE_INSTALL_PREFIX "/tmp/install/" )
 
