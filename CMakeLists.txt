@@ -16,7 +16,7 @@ ecbuild_bundle( PROJECT mpistubs     STASH "ecsdk/mpistubs"    BRANCH     develo
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       BRANCH     develop         UPDATE )
 ecbuild_bundle( PROJECT transi       STASH "atlas/transi"      BRANCH     develop         UPDATE )
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       BRANCH     develop         UPDATE )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"           BRANCH     develop         UPDATE )
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"           BRANCH     feature/soyuz   UPDATE )
 
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH     feature/mir     UPDATE )
 
