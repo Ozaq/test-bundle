@@ -10,7 +10,7 @@ project( MarsClient C CXX )
 
 ecbuild_bundle_initialize()
 
-ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     BRANCH     release/1.14.0  UPDATE )
+ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     TAG        1.13.1 )
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  BRANCH     release/4.6.9   UPDATE )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      BRANCH     release/4.0.2   UPDATE )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       BRANCH     release/0.9.0   UPDATE )
