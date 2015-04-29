@@ -14,7 +14,7 @@ ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     TAG     1.13.1 )
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  BRANCH  4.6.8  )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      BRANCH  release/4.0.2   UPDATE )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       BRANCH  0.7.3  )
-ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.10.3 )
+ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.10.2 )
 
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH  develop UPDATE  )
 
