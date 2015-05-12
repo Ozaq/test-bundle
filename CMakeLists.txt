@@ -2,7 +2,7 @@ cmake_minimum_required( VERSION 2.8.4 FATAL_ERROR )
 
 include( ${INCLUDE_CONFIG}-local-config.cmake OPTIONAL )
 
-set( CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_CURRENT_SOURCE_DIR}/ecbuild/cmake;${CMAKE_MODULE_PATH}" )
+set( CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_CURRENT_SOURCE_DIR}/../ecbuild/cmake;${CMAKE_MODULE_PATH}" )
 
 include( ecbuild_bundle )
 
