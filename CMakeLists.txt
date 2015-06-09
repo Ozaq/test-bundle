@@ -6,7 +6,7 @@ set( CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_CURRENT_SOURCE
 
 include( ecbuild_bundle )
 
-project( MarsClient C CXX )
+project( MarsClient C CXX Fortran )
 
 ecbuild_bundle_initialize()
 
