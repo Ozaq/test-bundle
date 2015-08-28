@@ -8,7 +8,7 @@ project( MarsClient C CXX Fortran )
 
 ecbuild_bundle_initialize()
 
-ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     TAG     1.14.0 )
+ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     TAG     1.14.1 )
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.6.8  )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.1.0  )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.6.2  )
