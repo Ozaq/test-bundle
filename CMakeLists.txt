@@ -15,6 +15,6 @@ ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.2.0  )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.6.2  )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.10.2 )
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG     6.11.0 )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG     6.11.1 )
 
 ecbuild_bundle_finalize()
