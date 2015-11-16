@@ -12,12 +12,14 @@ project( MarsClient C CXX Fortran )
 
 ecbuild_bundle_initialize()
 
-ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     BRANCH     hotfix/1.14.3 )
-ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  BRANCH     release/4.7.0 )
-ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      BRANCH     hotfix/4.2.1 )
-ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       BRANCH     release/0.10.0 )
-ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       BRANCH     hotfix/0.10.5.3 )
+ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     TAG     1.14.2 )
+ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.6.8  )
+# ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      BRANCH  release/4.2.0 UPDATE )
+ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.2.0  )
+ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.6.2  )
+ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.10.2 )
 
+#ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG     6.11.1 )
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH     hotfix/6.11.2 )
 
 ecbuild_bundle_finalize()
