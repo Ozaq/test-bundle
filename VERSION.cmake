@@ -6,4 +6,4 @@
 # granted to it by virtue of its status as an intergovernmental organisation nor
 # does it submit to any jurisdiction.
 
-set( ${PROJECT_NAME}_VERSION_STR  "6.13.0.5-odb_api.0.10.5.3" )
+set( ${PROJECT_NAME}_VERSION_STR  "6.14.0.0" )
