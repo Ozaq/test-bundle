@@ -14,8 +14,7 @@ ecbuild_bundle_initialize()
 
 ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     TAG     1.14.6 )
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.6.8  )
-#ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     6741bafe6a462097f3d97feca127ca6b65b39b88 )
-ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     7be0cb39e03e077a181aad9add10379831ff501d )
+ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.3.8-rc1 )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.10.2  )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.10.5.3 )
 
