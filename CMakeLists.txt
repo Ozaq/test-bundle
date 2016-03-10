@@ -12,9 +12,10 @@ project( MarsClient C CXX Fortran )
 
 ecbuild_bundle_initialize()
 
-set( BUFR_TABLES_PATH ${CMAKE_INSTALL_PREFIX}/${INSTALL_DATA_DIR} ) # ensures libemos finds the BUFR tables
-
-ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000408 )
+### disable BUFRDC table for now
+#set( BUFR_TABLES_PATH ${CMAKE_INSTALL_PREFIX}/${INSTALL_DATA_DIR} ) # ensures libemos finds the BUFR tables
+#ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000408 )
+option( ENABLE_LIBEMOS_BUFRDC OFF )
 
 ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     TAG     1.14.6 )
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.6.8  )
