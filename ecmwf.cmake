@@ -10,6 +10,6 @@ set( FDB_CONF_FILE "/usr/local/apps/fdb/etc/Config" )
 
 set( ENABLE_SINGLE_PRECISION OFF )
 
-set( BUFR_TABLES_PATH "/usr/local/apps/libemos/tables/bufr/text/000405" )
+set( BUFR_TABLES_PATH "/usr/local/apps/libemos/tables/bufr/text/000408" )
 
 # set( ECMWF_GIT https )
