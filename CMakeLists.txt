@@ -18,7 +18,7 @@ ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000408 )
 #option( ENABLE_LIBEMOS_BUFRDC OFF )
 
 ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG     2.2.0  )
-ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     TAG     1.15.0 )
+ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     BRANCH  feature/uerra2 UPDATE )
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.6.8  )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.4.1  )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.12.1 )
