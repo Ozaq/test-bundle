@@ -14,11 +14,20 @@ ecbuild_bundle_initialize()
 
 ### disable BUFRDC table for now
 #set( BUFR_TABLES_PATH ${CMAKE_INSTALL_PREFIX}/${INSTALL_DATA_DIR} ) # ensures libemos finds the BUFR tables
-ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000408 )
+ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000409 )
 #option( ENABLE_LIBEMOS_BUFRDC OFF )
 
 ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG     2.2.0  )
-ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     TAG     1.16.0 )
+
+ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
+
+if( HAVE_ECCODES )
+    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes" TAG 0.16.0 )
+else()
+    ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"   TAG 1.16.0 )
+endif()
+
+
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.6.8  )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.4.1  )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.12.1 )
