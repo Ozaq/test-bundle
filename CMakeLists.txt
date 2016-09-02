@@ -10,11 +10,18 @@ project( MarsClient C CXX )
 
 ecbuild_bundle_initialize()
 
-ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     BRANCH     develop         UPDATE )
+ecbuild_requires_macro_version( 2.0 )
+
+ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT OFF )
+if( HAVE_ECCODES )
+    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"    BRANCH develop UPDATE )
+else()
+    ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"      TAG   1.15.0 )
+endif()
+
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  BRANCH     develop         UPDATE )
 ecbuild_bundle( PROJECT mpistubs     STASH "ecsdk/mpistubs"    BRANCH     develop         UPDATE )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       BRANCH     develop         UPDATE )
-ecbuild_bundle( PROJECT ecml         STASH "odb/ecml"          BRANCH     develop         UPDATE )
 ecbuild_bundle( PROJECT transi       STASH "atlas/transi"      BRANCH     develop         UPDATE )
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       BRANCH     develop         UPDATE )
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"           BRANCH     develop         UPDATE )
