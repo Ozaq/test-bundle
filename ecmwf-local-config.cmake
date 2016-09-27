@@ -11,3 +11,5 @@ set( FDB_CONF_FILE "/usr/local/apps/fdb/etc/Config" )
 # libemos
 set( ENABLE_INSTALL_TABLES OFF CACHE INTERNAL "" )
 
+set( ENABLE_MEMFS  ON CACHE BOOL "activate memfs in eccodes" FORCE )
+
