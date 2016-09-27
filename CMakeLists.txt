@@ -12,7 +12,7 @@ ecbuild_bundle_initialize()
 
 ecbuild_requires_macro_version( 2.0 )
 
-ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT OFF )
+ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
 if( HAVE_ECCODES )
     ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"    BRANCH develop UPDATE )
 else()
@@ -27,6 +27,6 @@ ecbuild_bundle( PROJECT transi       STASH "atlas/transi"      BRANCH     develo
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       BRANCH     develop         UPDATE )
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"           BRANCH     develop         UPDATE )
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH     feature/soyuz   UPDATE )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH     feature/mir     UPDATE )
 
 ecbuild_bundle_finalize()
