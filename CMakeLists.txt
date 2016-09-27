@@ -16,7 +16,7 @@ ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT OFF )
 if( HAVE_ECCODES )
     ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"    BRANCH develop UPDATE )
 else()
-    ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"      TAG   1.15.0 )
+    ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"      BRANCH develop UPDATE )
 endif()
 
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  BRANCH     develop         UPDATE )
