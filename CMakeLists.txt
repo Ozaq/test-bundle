@@ -27,6 +27,9 @@ ecbuild_bundle( PROJECT transi       STASH "atlas/transi"      BRANCH     develo
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       BRANCH     develop         UPDATE )
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"           BRANCH     develop         UPDATE )
 
+ecbuild_bundle( PROJECT marskit      STASH "mars/marskit"      BRANCH     develop         UPDATE )
+ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       BRANCH     develop         UPDATE )
+
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH     feature/mir     UPDATE )
 
 ecbuild_bundle_finalize()
