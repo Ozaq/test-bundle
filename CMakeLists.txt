@@ -1,5 +1,9 @@
 cmake_minimum_required( VERSION 2.8.4 FATAL_ERROR )
 
+if( ECMWF )
+    include( ecmwf-local-config.cmake OPTIONAL )
+endif()
+
 include( ${INCLUDE_CONFIG}-local-config.cmake OPTIONAL )
 
 set( CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_CURRENT_SOURCE_DIR}/ecbuild/cmake;${CMAKE_MODULE_PATH}" )
