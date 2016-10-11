@@ -8,3 +8,13 @@ mars-client
 odb_api
 mars-server
 build
+CMakeLists.txt.user*
+atlas
+bufrdc_tables
+eccodes
+fckit
+marskit
+mir
+mpistubs
+transi
+
