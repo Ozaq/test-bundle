@@ -1,15 +1,22 @@
-set( ENABLE_PYTHON OFF )
+macro( ecbuild_set_verbose )
+    set( ${ARGV} )
+    message( STATUS "SET ${ARGV0} = ${ARGV1}" )
+endmacro()
+
+### PYTHON
+
+ecbuild_set_verbose( ENABLE_PYTHON CACHE BOOL "Python disabled" FORCE )
 
 ### FDB
 
-set( ENABLE_FDB "REQUIRE" )
+ecbuild_set_verbose( ENABLE_FDB ON CACHE BOOL "FDB enabled" FORCE )
 
-set( FDB_CONF_FILE "/usr/local/apps/fdb/etc/Config" )
+ecbuild_set_verbose( FDB_CONF_FILE "/usr/local/apps/fdb/etc/Config" )
 
 ### BUFR
 
-set( ENABLE_SINGLE_PRECISION OFF )
+ecbuild_set_verbose( ENABLE_SINGLE_PRECISION OFF )
 
-set( BUFR_TABLES_PATH "/usr/local/apps/libemos/tables/bufr/text/000408" )
+ecbuild_set_verbose( BUFR_TABLES_PATH "/usr/local/apps/libemos/tables/bufr/text/000408" )
 
 # set( ECMWF_GIT https )
