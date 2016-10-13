@@ -21,7 +21,7 @@ ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT OFF )
 if( HAVE_ECCODES )
     ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes" TAG 0.17.0 )
 else()
-    ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"   TAG 1.17.0 )
+    ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"   TAG 1.18.0 )
 endif()
 
 
