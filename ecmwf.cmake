@@ -5,7 +5,7 @@ endmacro()
 
 ### PYTHON
 
-ecbuild_set_verbose( ENABLE_PYTHON CACHE BOOL "Python disabled" FORCE )
+ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" FORCE )
 
 ### FDB
 
