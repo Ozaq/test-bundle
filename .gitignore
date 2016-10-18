@@ -1,4 +1,3 @@
-
 *.txt.user
 *~
 CMakeLists.txt.user*
@@ -17,6 +16,7 @@ libemos
 mars-client
 mars-server
 marskit
+metkit
 mir
 mpistubs
 odb_api
