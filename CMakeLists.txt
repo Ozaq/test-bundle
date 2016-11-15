@@ -26,10 +26,10 @@ endif()
 
 
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.6.8  )
-ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.4.3  )
+ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.4.4  )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.12.1 )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.11.1 )
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG     6.15.7 )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG     6.15.8 )
 
 ecbuild_bundle_finalize()
