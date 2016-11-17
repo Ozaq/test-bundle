@@ -14,12 +14,12 @@ ecbuild_bundle_initialize()
 
 ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000409 )
 
-ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG     2.4.1  )
+ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG     2.5.0 )
 
 ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
 
 if( HAVE_ECCODES )
-    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes" TAG 2.0.1 )
+    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes" TAG 2.0.2 )
 else()
     ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"   TAG 1.19.0 )
 endif()
