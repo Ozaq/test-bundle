@@ -25,7 +25,7 @@ else()
 endif()
 
 
-ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.8.1  )
+ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  BRANCH  hotfix/4.8.2 UPDATE )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.4.5  )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.14.1 )
 ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG     0.3.2  )
