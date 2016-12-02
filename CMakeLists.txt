@@ -26,11 +26,11 @@ ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG  0.15.0-rc1 )
 ecbuild_bundle( PROJECT fckit        STASH "ecsdk/fckit"       TAG  0.2.1 )
 ecbuild_bundle( PROJECT transi       STASH "atlas/transi"      TAG  0.3.3 )
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG  0.8.1 )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG  0.7.0 )
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"           BRANCH  feature/mir  UPDATE )
 
 ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG  0.3.2 )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG  0.16.1 )
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG  feature-mir-0.7.0 )  # BRANCH feature/mir UPDATE
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH  feature/mir  UPDATE )
 
 ecbuild_bundle_finalize()
