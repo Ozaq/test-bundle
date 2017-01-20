@@ -1,7 +1,16 @@
 cmake_minimum_required( VERSION 2.8.4 FATAL_ERROR )
 
+macro( ecbuild_set_verbose )
+    set( ${ARGV} )
+    message( STATUS "SET ${ARGV0} = ${ARGV1}" )
+endmacro()
+
 if( ECMWF )
     include( ecmwf.cmake OPTIONAL )
+endif()
+
+if( LOCALCONFIG )
+    include( ${LOCALCONFIG} OPTIONAL )
 endif()
 
 set( CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_CURRENT_SOURCE_DIR}/ecbuild/cmake;${CMAKE_MODULE_PATH}" )
