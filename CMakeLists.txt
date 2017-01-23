@@ -25,8 +25,8 @@ ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG  4.8.2 )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG  0.15.0-rc3 )
 ecbuild_bundle( PROJECT fckit        STASH "ecsdk/fckit"       TAG  0.2.2 )
 ecbuild_bundle( PROJECT transi       STASH "atlas/transi"      TAG  0.3.4 )
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG  4150a33 )  # achead of 0.8.2
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG  0.7.2 )
+ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG  ad82c1ae )  # ahead of 0.8.2
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG  0.7.3 )
 
 ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG  0.3.2 )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG  0.16.1 )
