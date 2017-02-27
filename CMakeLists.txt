@@ -21,24 +21,25 @@ project( MarsClient C CXX Fortran )
 
 ecbuild_bundle_initialize()
 
-ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000409 )
+ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000410 )
 
-ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG     2.2.0 )
+ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG     2.6.0 )
 
-ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT OFF )
+ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
 
 if( HAVE_ECCODES )
-    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes" TAG 0.17.0 )
+    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes" TAG 2.1.0 )
 else()
-    ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"   TAG 1.17.0 )
+    ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"   TAG 1.20.0 )
 endif()
 
 
-ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.8.3  )
-ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.4.3  )
-ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.12.1 )
-ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.11.1 )
+ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.8.4  )
+ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.4.6  )
+ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.15.0 )
+ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG     0.4.0  )
+ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       BRANCH  support/0.15.4 )
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG  6.15.7 )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG  6.16.0 )
 
 ecbuild_bundle_finalize()
