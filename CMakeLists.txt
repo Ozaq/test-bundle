@@ -40,6 +40,6 @@ ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.15.0 )
 ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG     0.4.0  )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       BRANCH  support/0.15.4 )
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH  release/6.17.0 )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG     6.17.0 )
 
 ecbuild_bundle_finalize()
