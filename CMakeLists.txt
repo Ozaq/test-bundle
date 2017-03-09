@@ -9,6 +9,10 @@ if( ECMWF )
     include( ecmwf.cmake OPTIONAL )
 endif()
 
+if( ECMWF_HPC )
+    include( ecmwf-hpc-local-config.cmake OPTIONAL )
+endif()
+
 if( LOCALCONFIG )
     include( ${LOCALCONFIG} OPTIONAL )
 endif()
@@ -40,7 +44,11 @@ ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.16.1 )
 ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG     0.5.0  )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.15.4.1 )
 
-ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  TAG     7.8.1  )
+ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
+
+if( HAVE_FDB5 )
+  ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  TAG     7.8.1  )
+endif()
 
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG     6.17.0 )
 
