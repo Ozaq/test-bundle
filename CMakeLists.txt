@@ -10,7 +10,8 @@ if( ECMWF )
 endif()
 
 if( ECMWF_HPC )
-    include( ecmwf-hpc-local-config.cmake OPTIONAL )
+	set(ECMWF ON)
+	include( ecmwf-hpc-local-config.cmake OPTIONAL )
 endif()
 
 if( LOCALCONFIG )
