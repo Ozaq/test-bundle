@@ -51,6 +51,6 @@ if( HAVE_FDB5 )
     ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  BRANCH     hotfix/7.8.3 UPDATE )
 endif()
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH  hotfix/6.17.1 UPDATE ) )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH  hotfix/6.17.1 UPDATE )
 
 ecbuild_bundle_finalize()
