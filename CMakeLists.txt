@@ -20,11 +20,11 @@ else()
 endif()
 
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG  4.8.4 )
-ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG  dc2a75ed87739d016465020a2a9798fb0a4c925b )  # ahead of 0.16.1 (current hotfix/0.16.2)
+ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG  15f1b6bcca2df6be4f86d2ab9e9a387832d7507c )  # ahead of 0.16.2 (current develop)
 ecbuild_bundle( PROJECT fckit        STASH "ecsdk/fckit"       TAG  0.3.0 )
-ecbuild_bundle( PROJECT transi       STASH "atlas/transi"      TAG  060e69c630569b5e7c339fb9f6d18b658821661d )  # ahead of 0.4.0
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG  846ce37c58324a51027aed5123e317399554018c )  # ahead of 0.9.0
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG  0.7.5 )
+ecbuild_bundle( PROJECT transi       STASH "atlas/transi"      TAG  3d7c6ce43718f57fa42dc15324c5849c787d68e5 )  # ahead of 0.4.0
+ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG  cc02327738e355e50bbf22c41e03116782987ae0 )  # ahead of 0.9.0
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG  0.7.6 )
 
 ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG  0.5.0 )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG  0.16.1 )
