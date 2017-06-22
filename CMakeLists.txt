@@ -47,7 +47,7 @@ ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG  8775ef19fe35
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG  0.7.7 )
 
 ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG  0.5.0 )
-ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG  0.17.0 )
+ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG  d486e7a3e43a16067b952b817f1bab42f6e19743 )  # ahead of 0.17.0
 
 ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
 
