@@ -32,26 +32,26 @@ ecbuild_bundle( PROJECT ecbuild       STASH "ecsdk/ecbuild"      TAG  2.7.1 )
 ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
 
 if( HAVE_ECCODES )
-    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes" TAG 2.4.0 )
+    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes" TAG 3db2ef4605bb4ab0014f9107459859fd78f332f1 ) # current hotfix/2.4.1
 else()
-    ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"   TAG rc_v1.23.0_20170605 )
+    ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"   TAG BRANCH develop )  # not used
 endif()
 
 
-ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG  4.8.4 )
-ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG  97a399a2b32ebe1d368caaadb93c490dcc2d6987 )  # current release/0.17.0
-ecbuild_bundle( PROJECT fckit        STASH "ecsdk/fckit"       TAG  91547a61ce05682ca35871e8c523ec6d5c7b57ad )  # ahead of 0.3.3
-ecbuild_bundle( PROJECT transi       STASH "atlas/transi"      TAG  0.4.2 )
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG  8775ef19fe35e8d025e242ac0e3607f3da4e1fe5 )  # current release/0.11.0
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG  0.7.7 )
+ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG 274fefabdc354f6fed37d6ca8aec22ed7fde0b86 )  # ahead of 4.8.4
+ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG 0ce0e62bd2e2d79175f9e08b808c5308c95e541f )  # ahead of 0.17.0
+ecbuild_bundle( PROJECT fckit        STASH "ecsdk/fckit"       TAG 4c173cea26d6e2c229a993f97a56abd38397df20 )  # ahead of 0.3.3
+ecbuild_bundle( PROJECT transi       STASH "atlas/transi"      TAG eed8e758fae83ef7c985117d60722971e3db985e )  # ahead of 0.3.3
+ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG f6d7e64b6249ed3f8d49c93a3720c07e69cdb097 )  # ahead of 0.11.0
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG 0.7.8 )
 
-ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG  0.5.3 )
-ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG  d6c2b9ecd6cf12fdeebd0a9e02040587e284a12a )  # current release/0.15.5
+ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG 80b2beb514bfea59cc2dba950ab82818caf7ae2f )  # ahead of 0.6.0
+ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG 0.17.1 )
 
 ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
 
 if( HAVE_FDB5 )
-    ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  TAG   7.9.2 )
+    ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  TAG   7.9.2 )  # not used
 endif()
 
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH  feature/mir UPDATE )
