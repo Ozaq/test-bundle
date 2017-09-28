@@ -28,19 +28,19 @@ ecbuild_bundle_initialize()
 
 ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000410 )
 
-ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG     2.6.1 )
+ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG     2.7.3 )
 
 ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
 
 if( HAVE_ECCODES )
-    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes" TAG 2.4.0 )
+    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes" TAG 2.5.0 )
 else()
     ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"   TAG 1.23.0 )
 endif()
 
 
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.8.4  )
-ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.5.0  )
+ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.5.2  )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.16.5 )
 ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG     0.5.3  )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.15.4.1 )
@@ -48,9 +48,9 @@ ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.15.4.1 
 ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
 
 if( HAVE_FDB5 )
-    ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  TAG   7.9.3 )
+    ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  TAG   7.10.0 )
 endif()
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG 6.18.0 )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH release/6.19.0 UPDATE )
 
 ecbuild_bundle_finalize()
