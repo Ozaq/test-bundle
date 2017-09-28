@@ -26,35 +26,33 @@ project( MarsClient C CXX Fortran )
 
 ecbuild_bundle_initialize()
 
-ecbuild_bundle( PROJECT bufrtables   STASH "mars/bufrdc_tables"  TAG     000411 )
-ecbuild_bundle( PROJECT ecbuild       STASH "ecsdk/ecbuild"      BRANCH  release/2.7.3 UPDATE )
+ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000410 )
+
+ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG     2.7.3 )
 
 ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )  # FIXME remove when lxg/ecgb can handle this
 ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
 
 if( HAVE_ECCODES )
-	ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"     BRANCH  hotfix/2.4.2 UPDATE )
+    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes" TAG 2.5.0 )
 else()
-    ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"   	 BRANCH develop )  # not used
+    ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"   TAG 1.23.0 )
 endif()
 
 
-ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"    TAG     4.8.4 )
-ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"         BRANCH  release/0.18.0 UPDATE )
-ecbuild_bundle( PROJECT fckit        STASH "ecsdk/fckit"         BRANCH  release/0.4.1  UPDATE )
-ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"        BRANCH  release/0.7.0  UPDATE )
-ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"         BRANCH  release/0.17.3 UPDATE )
-ecbuild_bundle( PROJECT transi       STASH "atlas/transi"        BRANCH  release/0.4.3  UPDATE )
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         BRANCH  release/0.12.0 UPDATE )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"             BRANCH  release/0.8.0  UPDATE )
+ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.8.4  )
+ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.5.2  )
+ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.18.0 )
+ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG     0.7.0  )
+ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.15.6 )
 
 ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
 
 if( HAVE_FDB5 )
-ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"    BRANCH  release/7.10.0  UPDATE )
+    ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  TAG 7.10.0 )
 endif()
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    BRANCH  feature/mir   UPDATE )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH feature/mir UPDATE )
 
 ecbuild_bundle_finalize()
 
