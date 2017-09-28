@@ -51,6 +51,6 @@ if( HAVE_FDB5 )
     ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  TAG   7.9.3 )
 endif()
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH release/6.18.0 )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG 6.18.0 )
 
 ecbuild_bundle_finalize()
