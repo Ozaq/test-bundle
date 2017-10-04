@@ -54,8 +54,8 @@ endif()
 
 ecbuild_bundle( PROJECT fckit        STASH "ecsdk/fckit"         TAG     0.4.1  )
 ecbuild_bundle( PROJECT transi       STASH "atlas/transi"        TAG     0.4.3  )
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG     0.12.0 )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"             TAG     0.8.0  )
+ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG     0.12.1 )
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"             TAG     0.8.1  )
 
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH feature/mir UPDATE )
 
