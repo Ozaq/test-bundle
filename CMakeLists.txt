@@ -52,7 +52,7 @@ if( HAVE_FDB5 )
     ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  TAG 7.10.8 )
 endif()
 
-#ecbuild_bundle( PROJECT fckit        STASH "ecsdk/fckit"         TAG     0.4.1 )
+ecbuild_bundle( PROJECT fckit        STASH "ecsdk/fckit"         TAG     0.4.1 )
 ecbuild_bundle( PROJECT transi       STASH "atlas/transi"        TAG     0.4.4  )
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG     0.12.2 )
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"             TAG     0.8.7  )
