@@ -1,3 +1,4 @@
+ecbuild_set_verbose( ECMWF  ON  CACHE BOOL "ECMWF enabled" )
 ecbuild_set_verbose( ENABLE_MEMFS  ON  CACHE BOOL "memfs enabled" )
 ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )
 
