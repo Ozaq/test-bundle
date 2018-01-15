@@ -1,3 +1,4 @@
+.tags*
 *.txt.user
 *~
 CMakeLists.txt.user*
