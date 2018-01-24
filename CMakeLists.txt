@@ -34,7 +34,7 @@ ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )  # FIXME r
 ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
 
 if( HAVE_ECCODES )
-    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes" TAG develop  UPDATE )
+    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes" TAG 2.6.1 )
 else()
     ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"   TAG 1.24.0 )
 endif()
@@ -42,20 +42,20 @@ endif()
 
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.8.4  )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.5.3  )
-ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       BRANCH  hotfix/0.19.1 UPDATE )
-ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      BRANCH  develop UPDATE )
+ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.19.1 )
+ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG     0.9.1  )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.15.6 )
 
 ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
 
 if( HAVE_FDB5 )
-    ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  BRANCH hotfix/7.10.9 UPDATE )
+    ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server" TAG 7.10.9 )
 endif()
 
-ecbuild_bundle( PROJECT fckit        STASH "ecsdk/fckit"         BRANCH  develop UPDATE )
-ecbuild_bundle( PROJECT transi       STASH "atlas/transi"        BRANCH  develop UPDATE )
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         BRANCH  develop UPDATE )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"             BRANCH  develop UPDATE )
+# ecbuild_bundle( PROJECT fckit        STASH "ecsdk/fckit"         BRANCH  develop UPDATE )
+ecbuild_bundle( PROJECT transi       STASH "atlas/transi"        TAG   0.4.4)
+ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         BRANCH  feature/for-mir-0.8.9 UPDATE )
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"             BRANCH  release/0.8.9 UPDATE )
 
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    BRANCH feature/mir UPDATE )
 
