@@ -49,11 +49,11 @@ ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.15.6 )
 ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
 
 if( HAVE_FDB5 )
-    ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server" TAG 7.10.10 )
+    ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server" BRANCH release/7.11.0 UPDATE )
 endif()
 
 ecbuild_bundle( PROJECT transi       STASH "atlas/transi"        TAG   0.4.4)
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         BRANCH feature/for-mir-0.8.9 UPDATE )
+ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         BRANCH release/0.13.0 UPDATE )
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"             BRANCH release/0.8.9 UPDATE )
 
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    BRANCH feature/mir UPDATE )
