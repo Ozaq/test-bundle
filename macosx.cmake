@@ -2,7 +2,7 @@ ecbuild_set_verbose( ENABLE_ECMWF_DEVELOPMENT ON CACHE BOOL "ECMWF development m
 
 ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )
 
-ecbuild_set_verbose( ENABLE_NETCDF    OFF CACHE BOOL "NETCDF disabled" )
+ecbuild_set_verbose( ENABLE_NETCDF    ON CACHE BOOL "NETCDF disabled" )
 
 ecbuild_set_verbose( ENABLE_FDB       ON  CACHE BOOL "FDB enabled" )
 ecbuild_set_verbose( ENABLE_FDB5      ON  CACHE BOOL "FDB5 enabled" )
