@@ -1,3 +1,7 @@
+ecbuild_set_verbose( BUNDLE_SKIP_BUFRDC_TABLES   ON CACHE BOOL "skip" ) 
+ecbuild_set_verbose( BUNDLE_SKIP_FDB             ON CACHE BOOL "skip" ) 
+ecbuild_set_verbose( BUNDLE_SKIP_LIBEMOS         ON CACHE BOOL "skip" ) 
+
 ecbuild_set_verbose( ENABLE_MEMFS                ON  CACHE BOOL "memfs enabled" )
 ecbuild_set_verbose( ENABLE_PYTHON               OFF CACHE BOOL "Python disabled" )
 
