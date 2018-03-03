@@ -1,6 +1,6 @@
-ecbuild_set_verbose( BUNDLE_SKIP_BUFRDC_TABLES   ON CACHE BOOL "skip" ) 
-ecbuild_set_verbose( BUNDLE_SKIP_FDB             ON CACHE BOOL "skip" ) 
-ecbuild_set_verbose( BUNDLE_SKIP_LIBEMOS         ON CACHE BOOL "skip" ) 
+ecbuild_set_verbose( BUNDLE_SKIP_BUFRDC_TABLES   ON CACHE BOOL "skip" )
+ecbuild_set_verbose( BUNDLE_SKIP_FDB             ON CACHE BOOL "skip" )
+ecbuild_set_verbose( BUNDLE_SKIP_LIBEMOS         ON CACHE BOOL "skip" )
 
 ecbuild_set_verbose( ENABLE_MEMFS                ON  CACHE BOOL "memfs enabled" )
 ecbuild_set_verbose( ENABLE_PYTHON               OFF CACHE BOOL "Python disabled" )
@@ -14,3 +14,4 @@ ecbuild_set_verbose( ENABLE_FDB5        ON  CACHE BOOL "FDB5 enabled in client" 
 ecbuild_set_verbose( ENABLE_MARS_SERVER OFF CACHE BOOL "Don't build the server, just the libraries" )
 ecbuild_set_verbose( ENABLE_POINTDB     OFF CACHE BOOL "Don't build the pointdb server, just the libraries" )
 
+ecbuild_set_verbose( CPACK_PACKAGING_INSTALL_PREFIX "/opt/mars-client" CACHE PATH "RPM prefix" )
