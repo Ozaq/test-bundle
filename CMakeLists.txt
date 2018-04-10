@@ -41,7 +41,7 @@ endif()
 
 
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.8.4  )
-ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.5.4  )
+ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      BRANCH  release/4.5.5 UPDATE )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.20.0 )
 ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG     0.10.0 )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.15.7 )
@@ -56,6 +56,6 @@ ecbuild_bundle( PROJECT transi       STASH "atlas/transi"        TAG   0.4.4 )
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG   0.14.0 )
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"             TAG   0.8.11 )
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    TAG   6.20.5-rc2 )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    TAG   6.20.5 )
 ecbuild_bundle_finalize()
 
