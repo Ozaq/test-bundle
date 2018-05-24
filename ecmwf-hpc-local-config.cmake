@@ -19,3 +19,4 @@ ecbuild_set_verbose( ENABLE_POINTDB     OFF CACHE BOOL "Don't build the pointdb 
 
 ecbuild_set_verbose( FDB_CONF_FILE "/usr/local/apps/fdb/etc/Config" )
 
+ecbuild_set_verbose( MKL_ROOT /usr/local/apps/intel/16.0.3/compilers_and_libraries/linux/mkl CACHE PATH "MKL" FORCE )
