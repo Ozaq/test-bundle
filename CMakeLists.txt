@@ -53,7 +53,7 @@ if( HAVE_FDB5 )
 endif()
 
 ecbuild_bundle( PROJECT transi       STASH "atlas/transi"        TAG   0.4.4  )
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG  8b54e972 ) # in develop
+ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         BRANCH  release/0.15.0 )
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"             BRANCH  release/0.9.0 )
 
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    BRANCH  release/6.22.0 )
