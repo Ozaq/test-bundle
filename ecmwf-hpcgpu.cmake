@@ -1,3 +1,5 @@
+ecbuild_set_verbose( ENABLE_MPI  OFF  CACHE BOOL "MPI" )
+
 ecbuild_set_verbose( ENABLE_ECMWF_DEVELOPMENT  ON  CACHE BOOL "ECMWF development" )
 ecbuild_set_verbose( ENABLE_MEMFS  ON  CACHE BOOL "memfs enabled" )
 ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )

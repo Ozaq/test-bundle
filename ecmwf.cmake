@@ -1,3 +1,5 @@
+ecbuild_set_verbose( ENABLE_MPI  OFF  CACHE BOOL "MPI" )
+
 ### PYTHON
 
 ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )

@@ -1,3 +1,5 @@
+ecbuild_set_verbose( ENABLE_MPI  OFF  CACHE BOOL "MPI" )
+
 ecbuild_set_verbose( BUNDLE_SKIP_BUFRDC_TABLES   ON CACHE BOOL "skip" )
 ecbuild_set_verbose( BUNDLE_SKIP_FDB             ON CACHE BOOL "skip" )
 ecbuild_set_verbose( BUNDLE_SKIP_LIBEMOS         ON CACHE BOOL "skip" )
