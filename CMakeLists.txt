@@ -56,7 +56,7 @@ ecbuild_bundle( PROJECT transi       STASH "atlas/transi"        TAG     0.5.1 )
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG     0.15.1 )
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"             BRANCH  release/0.10.0 UPDATE )
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    TAG     6.22.1 )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    BRANCH  hotfix/6.22.2 UPDATE )
 
 ecbuild_bundle_finalize()
 
