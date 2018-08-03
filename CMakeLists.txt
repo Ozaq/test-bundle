@@ -34,7 +34,7 @@ ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )  # FIXME r
 ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
 
 if( HAVE_ECCODES )
-ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.8.1 )
+ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.8.2 )
 else()
 ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     TAG 1.24.0 )
 endif()
