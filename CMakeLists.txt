@@ -59,7 +59,7 @@ if(HAVE_TRANS)
     ecbuild_bundle( PROJECT transi       STASH "atlas/transi"        TAG     0.4.4 )
 endif()
 
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG     0.15.1 )
+ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         BRANCH  release/0.15.2 UPDATE )
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"             BRANCH  release/0.10.3 UPDATE )
 
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    TAG     6.22.4 )
