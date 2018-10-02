@@ -28,7 +28,7 @@ ecbuild_bundle_initialize()
 
 ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000413 )
 
-ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"       TAG    2.9.1 )
+ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"       TAG    rc_v2.9.1_EFAS_20181001 )
 
 ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )  # FIXME remove when lxg/ecgb can handle this
 ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
