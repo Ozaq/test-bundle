@@ -28,13 +28,13 @@ ecbuild_bundle_initialize()
 
 ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000413 )
 
-ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"       TAG    rc_v2.9.1_EFAS_20181001 )
+ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"       TAG    2.9.0 )
 
 ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )  # FIXME remove when lxg/ecgb can handle this
 ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
 
 if( HAVE_ECCODES )
-ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.9.0 )
+    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG rc_v2.9.1_EFAS_20181001 )
 else()
 ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     TAG 1.24.0 )
 endif()
