@@ -42,7 +42,7 @@ endif()
 
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.8.5  )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.5.7  )
-ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       BRANCH hotfix/0.23.2 UPDATE )
+ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       BRANCH  hotfix/0.23.2 UPDATE )
 ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG     0.15.2 )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.15.8 )
 
@@ -60,7 +60,7 @@ if(HAVE_TRANS)
 endif()
 
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG     0.15.2 )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"             BRANCH  hotfix/MIR-318-expand-cache-paths UPDATE )
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"             BRANCH  hotfix/1.0.1 UPDATE )
 
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    TAG     6.23.0 )
 
