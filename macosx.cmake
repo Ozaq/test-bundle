@@ -12,4 +12,4 @@ ecbuild_set_verbose( ENABLE_SINGLE_PRECISION     OFF   CACHE BOOL "libemos BUFR 
 ecbuild_set_verbose( ENABLE_ECCODES_THREADS      ON    CACHE BOOL "eccodes POSIX threads" )
 ecbuild_set_verbose( ENABLE_AEC                  OFF   CACHE BOOL "eccodes AEC aka SZip encoding" )
 ecbuild_set_verbose( ENABLE_JPG                  OFF   CACHE BOOL "eccodes JPG encoding" )
-
+ecbuild_set_verbose( ENABLE_MEMFS                ON    CACHE BOOL "eccodes memfs enabled" )
