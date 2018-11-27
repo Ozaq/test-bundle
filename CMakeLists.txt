@@ -42,14 +42,14 @@ endif()
 
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.8.5  )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.5.7  )
-ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.23.2 )
-ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG     0.15.2 )
+ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       BRANCH  release/0.24.0 UPDATE )
+ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      BRANCH  release/0.16.0 UPDATE )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.15.8 )
 
 ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
 
 if( HAVE_FDB5 )
-ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  TAG     7.14.2 )
+ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  BRANCH  hotfix/7.14.5 UPDATE )
 endif()
 
 
@@ -60,7 +60,7 @@ if(HAVE_TRANS)
 endif()
 
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG     0.15.2 )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"             TAG     1.0.1 )
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"             BRANCH  develop UPDATE )
 
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    BRANCH  hotfix/6.23.1 UPDATE )
 
