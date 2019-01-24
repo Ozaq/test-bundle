@@ -43,7 +43,7 @@ endif()
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG 4.9.0 )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG 4.5.9 )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG 0.24.0 )
-ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      BRANCH hotfix/0.17.0 UPDATE )
+ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      BRANCH release/0.17.0 UPDATE )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG 0.15.9 )
 
 ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
