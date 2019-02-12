@@ -28,7 +28,7 @@ ecbuild_bundle_initialize()
 
 ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000414 )
 
-ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"       TAG    2.9.4 )
+ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"       BRANCH release/2.10.0 UPDATE )
 
 ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )  # FIXME remove when lxg/ecgb can handle this
 ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
@@ -56,12 +56,12 @@ endif()
 ecbuild_add_option( FEATURE TRANS DESCRIPTION "Support for spectral transforms using IFS code" )
 if(HAVE_TRANS)
     ecbuild_enable_fortran( REQUIRED MODULE_DIRECTORY ${CMAKE_BINARY_DIR}/module )
-    ecbuild_bundle( PROJECT transi       STASH "atlas/transi"        TAG     0.4.4 )
+    ecbuild_bundle( PROJECT transi       STASH "atlas/transi"    BRANCH release/0.5.3 UPDATE )
 endif()
 
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG 0.15.2 )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"             TAG 1.1.2 )
+ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         BRANCH release/0.16.0 UPDATE )
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"             BRANCH release/1.2.0 UPDATE )
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    TAG 6.23.3 )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    BRANCH feature/MARSC-86 UPDATE )
 
 ecbuild_bundle_finalize()
