@@ -28,11 +28,11 @@ ecbuild_bundle_initialize()
 
 ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000414 )
 
-ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"       BRANCH release/2.10.0 UPDATE )
+ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG 2.10.0 )
 
 ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )  # FIXME remove when lxg/ecgb can handle this
 
-ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   BRANCH release/2.12.0 UPDATE)
+ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.12.0 )
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG 4.9.0 )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG 4.5.9 )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG 0.24.0 )
@@ -42,7 +42,7 @@ ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG 0.15.9 )
 ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
 
 if( HAVE_FDB5 )
-ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  BRANCH hotfix/7.14.11 UPDATE )
+ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  TAG 7.14.11 )
 endif()
 
 
