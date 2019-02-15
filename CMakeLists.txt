@@ -28,22 +28,15 @@ ecbuild_bundle_initialize()
 
 ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000414 )
 
-ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"       TAG    2.9.4 )
+ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG 2.10.0 )
 
 ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )  # FIXME remove when lxg/ecgb can handle this
-ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
 
-if( HAVE_ECCODES )
-    ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.10.3 )
-else()
-ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     TAG 1.24.0 )
-endif()
-
-
+ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.12.0 )
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG 4.9.0 )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG 4.5.9 )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG 0.24.0 )
-ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG 0.16.2 )
+ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG 0.17.0 )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG 0.15.9 )
 
 ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
@@ -56,12 +49,12 @@ endif()
 ecbuild_add_option( FEATURE TRANS DESCRIPTION "Support for spectral transforms using IFS code" )
 if(HAVE_TRANS)
     ecbuild_enable_fortran( REQUIRED MODULE_DIRECTORY ${CMAKE_BINARY_DIR}/module )
-    ecbuild_bundle( PROJECT transi       STASH "atlas/transi"        TAG     0.4.4 )
+    ecbuild_bundle( PROJECT transi       STASH "atlas/transi"    TAG 0.4.4 )
 endif()
 
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG 0.15.2 )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"             TAG 1.1.2 )
+ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG 0.16.0 )
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"             TAG 1.2.0 )
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    TAG 6.23.3 )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    TAG 6.24.0 )
 
 ecbuild_bundle_finalize()
