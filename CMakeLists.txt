@@ -49,7 +49,7 @@ endif()
 ecbuild_add_option( FEATURE TRANS DESCRIPTION "Support for spectral transforms using IFS code" )
 if(HAVE_TRANS)
     ecbuild_enable_fortran( REQUIRED MODULE_DIRECTORY ${CMAKE_BINARY_DIR}/module )
-    ecbuild_bundle( PROJECT transi       STASH "atlas/transi"    TAG 0.5.3 )
+    ecbuild_bundle( PROJECT transi       STASH "atlas/transi"    TAG 0.4.4 )
 endif()
 
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG 0.16.0 )
