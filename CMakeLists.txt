@@ -32,7 +32,7 @@ ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG 2.10.0 )
 
 ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )  # FIXME remove when lxg/ecgb can handle this
 
-ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.12.0 )
+ecbuild_bundle( PROJECT eccodes      STASH "eccodes/     )
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG 4.9.0 )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG 4.5.9 )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG 0.24.0 )
@@ -53,8 +53,8 @@ if(HAVE_TRANS)
 endif()
 
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG 0.16.0 )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"             TAG 1.2.0 )
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"             TAG 1.2.1 )
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    TAG 6.24.1 )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    BRANCH hotfix/6.24.2 UPDATE )
 
 ecbuild_bundle_finalize()
