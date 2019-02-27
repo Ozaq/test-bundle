@@ -46,15 +46,15 @@ ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  TAG 7.14.11 )
 endif()
 
 
-ecbuild_add_option( FEATURE TRANS DESCRIPTION "Support for spectral transforms using IFS code" )
+ecbuild_add_option( FEATURE TRANS DESCRIPTION "Support for spectral transforms using IFS code" DEFAULT OFF )
 if(HAVE_TRANS)
     ecbuild_enable_fortran( REQUIRED MODULE_DIRECTORY ${CMAKE_BINARY_DIR}/module )
     ecbuild_bundle( PROJECT transi       STASH "atlas/transi"    TAG 0.4.4 )
 endif()
 
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG 0.16.0 )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"             TAG 1.2.1 )
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"             TAG 1.2.2 )
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    TAG 6.24.2 )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    BRANCH release/6.24.3 UPDATE )
 
 ecbuild_bundle_finalize()
