@@ -40,11 +40,9 @@ ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG 0.17.0 )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG 0.15.9 )
 
 ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
-
 if( HAVE_FDB5 )
 ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server"  TAG 7.14.11 )
 endif()
-
 
 ecbuild_add_option( FEATURE TRANS DESCRIPTION "Support for spectral transforms using IFS code" DEFAULT OFF )
 if(HAVE_TRANS)
@@ -55,6 +53,6 @@ endif()
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG 0.16.0 )
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"             TAG 1.2.2 )
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    BRANCH release/6.24.3 UPDATE )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    BRANCH hotfix/6.24.3 UPDATE )
 
 ecbuild_bundle_finalize()
