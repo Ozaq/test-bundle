@@ -32,7 +32,7 @@ ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG 2.10.0 )
 
 ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )  # FIXME remove when lxg/ecgb can handle this
 
-ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.12.0 )
+ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.12.1 )
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG 4.9.0 )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG 4.5.9 )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG 0.24.0 )
