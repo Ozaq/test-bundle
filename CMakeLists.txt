@@ -47,6 +47,6 @@ endif()
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG 0.17.1 )
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG 1.2.5 )
 
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH hotfix/6.25.3 UPDATE )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG 6.25.3 )
 
 ecbuild_bundle_finalize()
