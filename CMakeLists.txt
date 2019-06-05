@@ -35,16 +35,16 @@ ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )  # FIXME r
 ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.12.6 )
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG 4.9.0 )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG 4.5.9 )
-ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG 1.0.3 )
+ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG 1.0.4 )
 ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG 1.2.2 )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG 0.15.10 )
 
 ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
 if( HAVE_FDB5 )
-ecbuild_bundle( PROJECT fdb5         STASH "mars/fdb5"         TAG 5.3.6 )
+ecbuild_bundle( PROJECT fdb5         STASH "mars/fdb5"         TAG 5.3.8 )
 endif()
 
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG 0.17.1 )
+ecbuild_bundle( PROJECT atlas        STASH "atl1as/atlas"      TAG 0.17.1 )
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG 1.2.5 )
 
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG 6.25.3 )
