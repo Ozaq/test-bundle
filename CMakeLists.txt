@@ -44,7 +44,7 @@ if( HAVE_FDB5 )
 ecbuild_bundle( PROJECT fdb5         STASH "mars/fdb5"         TAG 5.3.9 )
 endif()
 
-ecbuild_bundle( PROJECT atlas        STASH "atl1as/atlas"      TAG 0.17.1 )
+ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG 0.17.1 )
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG 1.2.5 )
 
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG 6.25.3 )
