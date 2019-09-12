@@ -13,5 +13,6 @@ ecbuild_set_verbose( BUFR_TABLES_PATH "/usr/local/apps/libemos/tables/bufr/text/
 ### FDB
 
 ecbuild_set_verbose( ENABLE_FDB         ON  CACHE BOOL "Both for FDB4 (client) and FDB5 (server)" )
+ecbuild_set_verbose( ENABLE_MIR_TOOLS   ON  CACHE BOOL "Install MIR tools" )
 
 ecbuild_set_verbose( FDB_CONF_FILE "/usr/local/apps/fdb/etc/Config" )

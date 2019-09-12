@@ -1,4 +1,4 @@
-cmake_minimum_required( VERSION 2.8.11 FATAL_ERROR )
+cmake_minimum_required( VERSION 3.1 FATAL_ERROR )
 
 macro( ecbuild_set_verbose )
     set( ${ARGV} )
@@ -26,43 +26,27 @@ project( MarsClient C CXX Fortran )
 
 ecbuild_bundle_initialize()
 
-ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000413 )
+ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000414 )
 
-ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"       TAG    2.9.1 )
+ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG 2.10.2 )
 
 ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )  # FIXME remove when lxg/ecgb can handle this
-ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
 
-if( HAVE_ECCODES )
-ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.9.0 )
-else()
-ecbuild_bundle( PROJECT grib_api     STASH "grib/grib_api"     TAG 1.24.0 )
-endif()
-
-
-ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG     4.8.5  )
-ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG     4.5.7  )
-ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG     0.23.0 )
-ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG     0.15.0 )
-ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG     0.15.8 )
+ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.13.0 )
+ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG 4.10.0 )
+ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG 4.6.2 )
+ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG 1.2.1     )
+ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG 1.2.5 )
+ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG 0.15.10 )
 
 ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
-
 if( HAVE_FDB5 )
-ecbuild_bundle( PROJECT mars-server  STASH "mars/mars-server" TAG    7.13.3 )
+ecbuild_bundle( PROJECT fdb5         STASH "mars/fdb5"         TAG 5.5.0 )
 endif()
 
+ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG 0.17.2 )
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG 1.2.8 )
 
-ecbuild_add_option( FEATURE TRANS DESCRIPTION "Support for spectral transforms using IFS code" )
-if(HAVE_TRANS)
-    ecbuild_enable_fortran( REQUIRED MODULE_DIRECTORY ${CMAKE_BINARY_DIR}/module )
-    ecbuild_bundle( PROJECT transi       STASH "atlas/transi"        TAG     0.4.4 )
-endif()
-
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"         TAG     0.15.2 )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"             TAG     0.10.3 )
-
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"    TAG     6.22.5 )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG 6.25.7 )
 
 ecbuild_bundle_finalize()
-
