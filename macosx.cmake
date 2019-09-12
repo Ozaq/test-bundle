@@ -1,5 +1,6 @@
 ecbuild_set_verbose( ENABLE_ECMWF_DEVELOPMENT ON CACHE BOOL "ECMWF development mode" )
 
+ecbuild_set_verbose( ENABLE_FORTRAN   OFF CACHE BOOL "Fortran disabled" )
 ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )
 
 ecbuild_set_verbose( ENABLE_NETCDF    ON CACHE BOOL "NETCDF disabled" )
