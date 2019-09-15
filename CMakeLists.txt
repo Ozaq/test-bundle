@@ -28,9 +28,11 @@ ecbuild_bundle_initialize()
 
 ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000414 )
 
+ecbuild_set_verbose( ENABLE_PKGCONFIG OFF CACHE BOOL "PkgConfig support disabled" ) # not needed for bundle
+
 ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG 2.10.2 )
 
-ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )  # FIXME remove when lxg/ecgb can handle this
+ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )  # FIXME remove when lxg/ecgb can handle this
 
 ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.13.0 )
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG 4.10.0 )
