@@ -30,6 +30,7 @@ ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000414 )
 
 ecbuild_set_verbose( ENABLE_PKGCONFIG OFF CACHE BOOL "PkgConfig support disabled" ) # not needed for bundle
 ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )            # FIXME remove when lxg/ecgb can handle this
+ecbuild_set_verbose( ENABLE_FORTRAN   OFF CACHE BOOL "Fortran option(s) disabled" ) # only fortran left for libemos
 
 ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG 3.0.5 )
 ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.13.0 )
