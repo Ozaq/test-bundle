@@ -42,6 +42,6 @@ ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG 0.15.10 )
 ecbuild_bundle( PROJECT fdb5         STASH "mars/fdb5"         TAG 5.5.0 )
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG 0.17.2 )
 ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG 1.2.8 )
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG 6.25.9 )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH release/6.26.0 )
 
 ecbuild_bundle_finalize()
