@@ -32,12 +32,12 @@ ecbuild_set_verbose( ENABLE_PKGCONFIG OFF CACHE BOOL "PkgConfig support disabled
 ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )            # FIXME remove when lxg/ecgb can handle this
 ecbuild_set_verbose( ENABLE_FORTRAN   OFF CACHE BOOL "Fortran option(s) disabled" ) # only fortran left for libemos
 
-ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     BRANCH release/3.1.0 )
-ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   BRANCH release/2.14.0 )
+ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG 3.1.0 )
+ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.14.0 )
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG 4.10.0 )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG 4.6.2 )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG 1.4.0 )
-ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      BRANCH release/1.3.0 )
+ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG 1.3.0 )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG 0.15.10 )
 ecbuild_bundle( PROJECT fdb5         STASH "mars/fdb5"         TAG 5.5.0 )
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG 0.19.0 )
