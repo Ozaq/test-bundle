@@ -28,25 +28,20 @@ ecbuild_bundle_initialize()
 
 ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG 000414 )
 
-ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     BRANCH develop )
+ecbuild_set_verbose( ENABLE_PKGCONFIG OFF CACHE BOOL "PkgConfig support disabled" ) # not needed for bundle
+ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )            # FIXME remove when lxg/ecgb can handle this
+ecbuild_set_verbose( ENABLE_FORTRAN   OFF CACHE BOOL "Fortran option(s) disabled" ) # only fortran left for libemos
 
-ecbuild_set_verbose( ENABLE_PYTHON OFF CACHE BOOL "Python disabled" )  # FIXME remove when lxg/ecgb can handle this
-
-ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   BRANCH develop )
-ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  BRANCH develop )
-ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      BRANCH develop )
-ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       BRANCH develop )
-ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      BRANCH develop )
-ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       BRANCH develop )
-
-ecbuild_add_option( FEATURE FDB5 DESCRIPTION "" DEFAULT OFF )
-if( HAVE_FDB5 )
-ecbuild_bundle( PROJECT fdb5         STASH "mars/fdb5"         BRANCH develop )
-endif()
-
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       BRANCH develop )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"           BRANCH develop )
-
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH develop )
+ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT fdb5         STASH "mars/fdb5"         BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"           BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH develop UPDATE )
 
 ecbuild_bundle_finalize()
