@@ -42,7 +42,7 @@ ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      BRANCH hotfix/1.4
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG 0.15.11 )
 ecbuild_bundle( PROJECT fdb5         STASH "mars/fdb5"         BRANCH release/5.6.0 UPDATE )
 ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG 0.19.2 )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"           BRANCH hotfix/1.4.7 UPDATE )
+ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG 1.4.7 )
 ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  BRANCH release/6.28.0 UPDATE )
 
 ecbuild_bundle_finalize()
