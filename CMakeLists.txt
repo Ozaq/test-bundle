@@ -37,6 +37,7 @@ ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   BRANCH develop UP
 ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  BRANCH develop UPDATE )
 ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      BRANCH develop UPDATE )
 ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT odc          STASH "odb/odc"           BRANCH develop UPDATE )
 ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      BRANCH develop UPDATE )
 ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       BRANCH develop UPDATE )
 ecbuild_bundle( PROJECT fdb5         STASH "mars/fdb5"         BRANCH develop UPDATE )
