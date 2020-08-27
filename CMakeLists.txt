@@ -37,7 +37,6 @@ ecbuild_bundle( PROJECT libemos       GIT "ssh://git@git.ecmwf.int/mars/libemos"
 ecbuild_bundle( PROJECT eckit         GIT "ssh://git@git.ecmwf.int/ecsdk/eckit"       BRANCH feature/ecbuild_3.4 UPDATE )
 ecbuild_bundle( PROJECT odc           GIT "ssh://git@git.ecmwf.int/odb/odc"           BRANCH feature/ecbuild_3.4 UPDATE )
 ecbuild_bundle( PROJECT metkit        GIT "ssh://git@git.ecmwf.int/ecsdk/metkit"      BRANCH feature/ecbuild_3.4 UPDATE )
-ecbuild_bundle( PROJECT odb_api       GIT "ssh://git@git.ecmwf.int/odb/odb_api"       BRANCH feature/ecbuild_3.4 UPDATE )
 ecbuild_bundle( PROJECT fdb5          GIT "ssh://git@git.ecmwf.int/mars/fdb5"         BRANCH feature/ecbuild_3.4 UPDATE )
 ecbuild_bundle( PROJECT atlas         GIT "ssh://git@git.ecmwf.int/atlas/atlas"       BRANCH feature/ecbuild_3.4 UPDATE )
 ecbuild_bundle( PROJECT mir           GIT "ssh://git@git.ecmwf.int/mir/mir"           BRANCH feature/ecbuild_3.4 UPDATE )
