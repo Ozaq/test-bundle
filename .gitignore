@@ -6,6 +6,7 @@ multio
 pgen
 .tags*
 *.txt.user
+.vscode
 *~
 CMakeLists.txt.user*
 atlas
