@@ -44,16 +44,16 @@ ecbuild_set_verbose( ENABLE_PKGCONFIG OFF CACHE BOOL "PkgConfig support disabled
 ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )            # FIXME remove when lxg/ecgb can handle this
 ecbuild_set_verbose( ENABLE_FORTRAN   OFF CACHE BOOL "Fortran option(s) disabled" ) # only fortran left for libemos
 
-ecbuild_bundle( PROJECT bufrdc_tables GIT "ssh://git@git.ecmwf.int/mars/bufrdc_tables.git" BRANCH feature/ecbuild_3.4 UPDATE )
-ecbuild_bundle( PROJECT eccodes       GIT "ssh://git@git.ecmwf.int/eccodes/eccodes"   BRANCH feature/ecbuild_3.4 UPDATE )
-ecbuild_bundle( PROJECT fdb           GIT "ssh://git@git.ecmwf.int/mars/fdb_vintage"  BRANCH feature/ecbuild_3.4 UPDATE )
-ecbuild_bundle( PROJECT libemos       GIT "ssh://git@git.ecmwf.int/mars/libemos"      BRANCH feature/ecbuild_3.4 UPDATE )
-ecbuild_bundle( PROJECT eckit         GIT "ssh://git@git.ecmwf.int/ecsdk/eckit"       BRANCH feature/ecbuild_3.4 UPDATE )
-ecbuild_bundle( PROJECT odc           GIT "ssh://git@git.ecmwf.int/odb/odc"           BRANCH feature/ecbuild_3.4 UPDATE )
-ecbuild_bundle( PROJECT metkit        GIT "ssh://git@git.ecmwf.int/ecsdk/metkit"      BRANCH feature/ecbuild_3.4 UPDATE )
-ecbuild_bundle( PROJECT fdb5          GIT "ssh://git@git.ecmwf.int/mars/fdb5"         BRANCH feature/ecbuild_3.4 UPDATE )
-ecbuild_bundle( PROJECT atlas         GIT "ssh://git@git.ecmwf.int/atlas/atlas"       BRANCH feature/ecbuild_3.4 UPDATE )
-ecbuild_bundle( PROJECT mir           GIT "ssh://git@git.ecmwf.int/mir/mir"           BRANCH feature/ecbuild_3.4 UPDATE )
-ecbuild_bundle( PROJECT mars-client   GIT "ssh://git@git.ecmwf.int/mars/mars-client"  BRANCH feature/ecbuild_3.4 UPDATE )
+ecbuild_bundle( PROJECT bufrdc_tables GIT "ssh://git@git.ecmwf.int/mars/bufrdc_tables.git" BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT eccodes       GIT "ssh://git@git.ecmwf.int/eccodes/eccodes"   BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT fdb           GIT "ssh://git@git.ecmwf.int/mars/fdb_vintage"  BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT libemos       GIT "ssh://git@git.ecmwf.int/mars/libemos"      BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT eckit         GIT "ssh://git@git.ecmwf.int/ecsdk/eckit"       BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT odc           GIT "ssh://git@git.ecmwf.int/odb/odc"           BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT metkit        GIT "ssh://git@git.ecmwf.int/ecsdk/metkit"      BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT fdb5          GIT "ssh://git@git.ecmwf.int/mars/fdb5"         BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT atlas         GIT "ssh://git@git.ecmwf.int/atlas/atlas"       BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT mir           GIT "ssh://git@git.ecmwf.int/mir/mir"           BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT mars-client   GIT "ssh://git@git.ecmwf.int/mars/mars-client"  BRANCH develop UPDATE )
 
 ecbuild_bundle_finalize()
