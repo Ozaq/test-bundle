@@ -1,4 +1,20 @@
-cmake_minimum_required( VERSION 3.1 FATAL_ERROR )
+# (C) Copyright 2011- ECMWF.
+#
+# This software is licensed under the terms of the Apache Licence Version 2.0
+# which can be obtained at http://www.apache.org/licenses/LICENSE-2.0.
+# In applying this licence, ECMWF does not waive the privileges and immunities
+# granted to it by virtue of its status as an intergovernmental organisation nor
+# does it submit to any jurisdiction.
+
+########################################################################################################################
+
+cmake_minimum_required( VERSION 3.12 FATAL_ERROR )
+
+find_package( ecbuild 3.4 REQUIRED HINTS ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/../ecbuild)
+
+project( MarsClient LANGUAGES C CXX Fortran )
+
+########################################################################################################################
 
 macro( ecbuild_set_verbose )
     set( ${ARGV} )
@@ -18,31 +34,25 @@ if( LOCALCONFIG )
     include( ${LOCALCONFIG} OPTIONAL )
 endif()
 
-set( CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_CURRENT_SOURCE_DIR}/ecbuild/cmake;${CMAKE_MODULE_PATH}" )
-
-include( ecbuild_bundle )
-
-project( MarsClient C CXX Fortran )
+########################################################################################################################
 
 ecbuild_bundle_initialize()
-
-ecbuild_bundle( PROJECT bufrdc_tables STASH "mars/bufrdc_tables" TAG    000414 )
 
 ecbuild_set_verbose( ENABLE_PKGCONFIG OFF CACHE BOOL "PkgConfig support disabled" ) # not needed for bundle
 ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )            # FIXME remove when lxg/ecgb can handle this
 ecbuild_set_verbose( ENABLE_FORTRAN   OFF CACHE BOOL "Fortran option(s) disabled" ) # only fortran left for libemos
 
-ecbuild_bundle( PROJECT ecbuild      STASH "ecsdk/ecbuild"     TAG 3.3.2 )
-ecbuild_bundle( PROJECT eccodes      STASH "eccodes/eccodes"   TAG 2.18.0 )
-ecbuild_bundle( PROJECT fdb          STASH "mars/fdb_vintage"  TAG 4.10.0 )
-ecbuild_bundle( PROJECT libemos      STASH "mars/libemos"      TAG 4.6.2 )
-ecbuild_bundle( PROJECT eckit        STASH "ecsdk/eckit"       TAG 1.12.3 )
-ecbuild_bundle( PROJECT odc          STASH "odb/odc"           TAG 1.0.3 )
-ecbuild_bundle( PROJECT metkit       STASH "ecsdk/metkit"      TAG 1.5.10 )
-ecbuild_bundle( PROJECT odb_api      STASH "odb/odb_api"       TAG 0.15.12 )
-ecbuild_bundle( PROJECT fdb5         STASH "mars/fdb5"         TAG 5.6.4 )
-ecbuild_bundle( PROJECT atlas        STASH "atlas/atlas"       TAG 0.19.2 )
-ecbuild_bundle( PROJECT mir          STASH "mir/mir"           TAG 1.5.3 )
-ecbuild_bundle( PROJECT mars-client  STASH "mars/mars-client"  TAG 6.28.7 )
+ecbuild_bundle( PROJECT bufrdc_tables GIT "ssh://git@git.ecmwf.int/mars/bufrdc_tables.git" BRANCH hotfix/000417  UPDATE)
+ecbuild_bundle( PROJECT eccodes       GIT "ssh://git@git.ecmwf.int/eccodes/eccodes"        BRANCH release/2.19.0 UPDATE)
+ecbuild_bundle( PROJECT fdb           GIT "ssh://git@git.ecmwf.int/mars/fdb_vintage"       BRANCH release/4.11.0 UPDATE)
+ecbuild_bundle( PROJECT libemos       GIT "ssh://git@git.ecmwf.int/mars/libemos"           BRANCH hotfix/4.6.3   UPDATE)
+ecbuild_bundle( PROJECT fdb           GIT "ssh://git@git.ecmwf.int/mars/fdb_vintage"       BRANCH release/4.11.0 UPDATE)
+ecbuild_bundle( PROJECT eckit         GIT "ssh://git@git.ecmwf.int/ecsdk/eckit"            BRANCH release/1.13.0 UPDATE)
+ecbuild_bundle( PROJECT odc           GIT "ssh://git@git.ecmwf.int/odb/odc"                BRANCH release/1.1.0  UPDATE)
+ecbuild_bundle( PROJECT metkit        GIT "ssh://git@git.ecmwf.int/ecsdk/metkit"           BRANCH release/1.6.0  UPDATE)
+ecbuild_bundle( PROJECT atlas         GIT "ssh://git@git.ecmwf.int/atlas/atlas"            BRANCH release/0.22.0 UPDATE)
+ecbuild_bundle( PROJECT mir           GIT "ssh://git@git.ecmwf.int/mir/mir"                BRANCH release/1.7.0  UPDATE)
+ecbuild_bundle( PROJECT fdb5          GIT "ssh://git@git.ecmwf.int/mars/fdb5"              BRANCH release/5.7.0  UPDATE)
+ecbuild_bundle( PROJECT mars-client   GIT "ssh://git@git.ecmwf.int/mars/mars-client"       BRANCH release/6.29.0 UPDATE)
 
 ecbuild_bundle_finalize()
