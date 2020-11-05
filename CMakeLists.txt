@@ -43,14 +43,14 @@ ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )        
 ecbuild_set_verbose( ENABLE_FORTRAN   OFF CACHE BOOL "Fortran option(s) disabled" ) # only fortran left for libemos
 
 ecbuild_bundle( PROJECT bufrdc_tables GIT "ssh://git@git.ecmwf.int/mars/bufrdc_tables.git" TAG 000417 UPDATE)
-ecbuild_bundle( PROJECT eccodes       GIT "ssh://git@git.ecmwf.int/eccodes/eccodes"        BRANCH hotfix/2.19.1 UPDATE)
+ecbuild_bundle( PROJECT eccodes       GIT "ssh://git@git.ecmwf.int/eccodes/eccodes"        TAG 2.19.1 UPDATE)
 ecbuild_bundle( PROJECT fdb           GIT "ssh://git@git.ecmwf.int/mars/fdb_vintage"       TAG 4.11.0 UPDATE)
 ecbuild_bundle( PROJECT libemos       GIT "ssh://git@git.ecmwf.int/mars/libemos"           TAG 4.6.3  UPDATE)
 ecbuild_bundle( PROJECT eckit         GIT "ssh://git@git.ecmwf.int/ecsdk/eckit"            BRANCH hotfix/1.13.2 UPDATE)
 ecbuild_bundle( PROJECT odc           GIT "ssh://git@git.ecmwf.int/odb/odc"                TAG 1.1.0  UPDATE)
 ecbuild_bundle( PROJECT metkit        GIT "ssh://git@git.ecmwf.int/ecsdk/metkit"           BRANCH hotfix/1.6.1  UPDATE)
 ecbuild_bundle( PROJECT atlas         GIT "ssh://git@git.ecmwf.int/atlas/atlas"            TAG 0.22.1 UPDATE)
-ecbuild_bundle( PROJECT mir           GIT "ssh://git@git.ecmwf.int/mir/mir"                BRANCH hotfix/1.7.1  UPDATE)
+ecbuild_bundle( PROJECT mir           GIT "ssh://git@git.ecmwf.int/mir/mir"                TAG 1.7.1  UPDATE)
 ecbuild_bundle( PROJECT fdb5          GIT "ssh://git@git.ecmwf.int/mars/fdb5"              BRANCH hotfix/5.7.1  UPDATE)
 ecbuild_bundle( PROJECT mars-client   GIT "ssh://git@git.ecmwf.int/mars/mars-client"       TAG 6.29.1 UPDATE)
 
