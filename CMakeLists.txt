@@ -22,6 +22,7 @@ macro( ecbuild_set_verbose )
 endmacro()
 
 if( ECMWF )
+	set(ECMWF ON)
     include( ecmwf.cmake OPTIONAL )
 endif()
 
