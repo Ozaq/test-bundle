@@ -52,7 +52,7 @@ ecbuild_bundle( PROJECT odc           GIT "ssh://git@git.ecmwf.int/odb/odc"     
 ecbuild_bundle( PROJECT metkit        GIT "ssh://git@git.ecmwf.int/ecsdk/metkit"           BRANCH hotfix/1.7.1 UPDATE)
 ecbuild_bundle( PROJECT atlas         GIT "ssh://git@git.ecmwf.int/atlas/atlas"            TAG 0.24.0 UPDATE)
 ecbuild_bundle( PROJECT mir           GIT "ssh://git@git.ecmwf.int/mir/mir"                TAG 1.7.2  UPDATE)
-ecbuild_bundle( PROJECT fdb5          GIT "ssh://git@git.ecmwf.int/mars/fdb5"              BRANCH develop UPDATE)
+ecbuild_bundle( PROJECT fdb5          GIT "ssh://git@git.ecmwf.int/mars/fdb5"              TAG 5.7.8  UPDATE)
 ecbuild_bundle( PROJECT mars-client   GIT "ssh://git@git.ecmwf.int/mars/mars-client"       TAG 6.31.1 UPDATE)
 
 ecbuild_bundle_finalize()
