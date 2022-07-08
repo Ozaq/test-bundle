@@ -44,7 +44,7 @@ ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )        
 ecbuild_set_verbose( ENABLE_FORTRAN   OFF CACHE BOOL "Fortran option(s) disabled" ) # only fortran left for libemos
 
 ecbuild_bundle( PROJECT bufrdc_tables GIT "ssh://git@git.ecmwf.int/mars/bufrdc_tables.git" TAG 000418 UPDATE)
-ecbuild_bundle( PROJECT eccodes       GIT "ssh://git@git.ecmwf.int/eccodes/eccodes"        TAG 2.26.0 UPDATE)
+ecbuild_bundle( PROJECT eccodes       GIT "ssh://git@git.ecmwf.int/eccodes/eccodes"        TAG 2.26.2 UPDATE)
 ecbuild_bundle( PROJECT fdb           GIT "ssh://git@git.ecmwf.int/mars/fdb_vintage"       TAG 4.11.0 UPDATE)
 ecbuild_bundle( PROJECT libemos       GIT "ssh://git@git.ecmwf.int/mars/libemos"           TAG 4.6.3  UPDATE)
 ecbuild_bundle( PROJECT eckit         GIT "ssh://git@git.ecmwf.int/ecsdk/eckit"            TAG 1.20.0 UPDATE)
