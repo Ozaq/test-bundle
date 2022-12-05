@@ -45,8 +45,6 @@ ecbuild_set_verbose( ENABLE_FORTRAN   OFF CACHE BOOL "Fortran option(s) disabled
 
 ecbuild_bundle( PROJECT bufrdc_tables GIT "ssh://git@git.ecmwf.int/mars/bufrdc_tables.git" TAG    000418  UPDATE)
 ecbuild_bundle( PROJECT eccodes       GIT "ssh://git@git.ecmwf.int/eccodes/eccodes"        BRANCH develop UPDATE)
-ecbuild_bundle( PROJECT fdb           GIT "ssh://git@git.ecmwf.int/mars/fdb_vintage"       BRANCH develop UPDATE)
-ecbuild_bundle( PROJECT libemos       GIT "ssh://git@git.ecmwf.int/mars/libemos"           BRANCH develop UPDATE)
 ecbuild_bundle( PROJECT eckit         GIT "ssh://git@git.ecmwf.int/ecsdk/eckit"            BRANCH develop UPDATE)
 ecbuild_bundle( PROJECT odc           GIT "ssh://git@git.ecmwf.int/odb/odc"                BRANCH develop UPDATE)
 ecbuild_bundle( PROJECT metkit        GIT "ssh://git@git.ecmwf.int/ecsdk/metkit"           BRANCH develop UPDATE)
