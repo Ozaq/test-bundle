@@ -11,7 +11,6 @@ ecbuild_set_verbose( ENABLE_SINGLE_PRECISION     OFF )
 
 ecbuild_set_verbose( ENABLE_ODBDIRECT            OFF  CACHE BOOL "Direct access to ODB on HPC" )
 
-ecbuild_set_verbose( ENABLE_FDB         OFF CACHE BOOL "Both for FDB4 (client) and FDB5 (server)" )
 ecbuild_set_verbose( ENABLE_FDB5        ON  CACHE BOOL "FDB5 enabled in client" )
 ecbuild_set_verbose( ENABLE_MIR_TOOLS   ON  CACHE BOOL "Install MIR tools" )
 
