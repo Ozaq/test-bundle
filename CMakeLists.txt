@@ -44,7 +44,7 @@ ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )        
 
 ecbuild_bundle( PROJECT bufrdc_tables   GIT "ssh://git@git.ecmwf.int/mars/bufrdc_tables.git" TAG    000418  UPDATE)
 ecbuild_bundle( PROJECT eccodes         GIT "ssh://git@git.ecmwf.int/eccodes/eccodes"        BRANCH develop UPDATE)
-ecbuild_bundle( PROJECT eckit           GIT "ssh://git@git.ecmwf.int/ecsdk/eckit"            BRANCH feature/bufferOpenHandle UPDATE)
+ecbuild_bundle( PROJECT eckit           GIT "ssh://git@git.ecmwf.int/ecsdk/eckit"            BRANCH develop UPDATE)
 ecbuild_bundle( PROJECT odc             GIT "ssh://git@git.ecmwf.int/odb/odc"                BRANCH develop UPDATE)
 ecbuild_bundle( PROJECT metkit          GIT "ssh://git@git.ecmwf.int/ecsdk/metkit"           BRANCH develop UPDATE)
 ecbuild_bundle( PROJECT atlas           GIT "ssh://git@git.ecmwf.int/atlas/atlas"            BRANCH develop UPDATE)
