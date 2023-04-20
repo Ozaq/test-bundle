@@ -43,14 +43,13 @@ ecbuild_set_verbose( ENABLE_PKGCONFIG OFF CACHE BOOL "PkgConfig support disabled
 ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )            # FIXME remove when lxg/ecgb can handle this
 ecbuild_set_verbose( ENABLE_FORTRAN   OFF CACHE BOOL "Fortran option(s) disabled" ) # only fortran left for libemos
 
-ecbuild_bundle( PROJECT bufrdc_tables GIT "ssh://git@git.ecmwf.int/mars/bufrdc_tables.git" TAG 000418 UPDATE)
-ecbuild_bundle( PROJECT eccodes       GIT "ssh://git@git.ecmwf.int/eccodes/eccodes"        TAG 2.29.1 UPDATE)
-ecbuild_bundle( PROJECT eckit         GIT "ssh://git@git.ecmwf.int/ecsdk/eckit"            TAG 1.22.0 UPDATE)
+ecbuild_bundle( PROJECT eccodes       GIT "ssh://git@git.ecmwf.int/eccodes/eccodes"        TAG 2.30.1 UPDATE)
+ecbuild_bundle( PROJECT eckit         GIT "ssh://git@git.ecmwf.int/ecsdk/eckit"            TAG 1.23.0 UPDATE)
 ecbuild_bundle( PROJECT odc           GIT "ssh://git@git.ecmwf.int/odb/odc"                TAG 1.4.6  UPDATE)
-ecbuild_bundle( PROJECT metkit        GIT "ssh://git@git.ecmwf.int/ecsdk/metkit"           TAG 1.10.4 UPDATE)
+ecbuild_bundle( PROJECT metkit        GIT "ssh://git@git.ecmwf.int/ecsdk/metkit"           TAG 1.10.8 UPDATE)
 ecbuild_bundle( PROJECT atlas         GIT "ssh://git@git.ecmwf.int/atlas/atlas"            TAG 0.32.1 UPDATE)
 ecbuild_bundle( PROJECT mir           GIT "ssh://git@git.ecmwf.int/mir/mir"                TAG 1.16.5 UPDATE)
-ecbuild_bundle( PROJECT fdb5          GIT "ssh://git@git.ecmwf.int/mars/fdb5"              TAG 5.11.7 UPDATE)
+ecbuild_bundle( PROJECT fdb5          GIT "ssh://git@git.ecmwf.int/mars/fdb5"              TAG 5.11.8 UPDATE)
 ecbuild_bundle( PROJECT mars-client   GIT "ssh://git@git.ecmwf.int/mars/mars-client"       TAG 6.33.15 UPDATE)
 
 ecbuild_bundle_finalize()
