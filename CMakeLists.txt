@@ -43,10 +43,10 @@ ecbuild_set_verbose( ENABLE_PKGCONFIG OFF CACHE BOOL "PkgConfig support disabled
 ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )            # FIXME remove when lxg/ecgb can handle this
 ecbuild_set_verbose( ENABLE_FORTRAN   OFF CACHE BOOL "Fortran option(s) disabled" ) # only fortran left for libemos
 
-ecbuild_bundle( PROJECT eccodes         GIT "git@github.com:ecmwf/eccodes"                   TAG 2.32.3  UPDATE)
-ecbuild_bundle( PROJECT eckit           GIT "git@github.com:ecmwf/eckit"                     TAG 1.24.6  UPDATE)
-ecbuild_bundle( PROJECT odc             GIT "git@github.com:ecmwf/odc"                       TAG 1.4.6   UPDATE)
-ecbuild_bundle( PROJECT metkit          GIT "git@github.com:ecmwf/metkit"                    TAG 1.10.20_DE UPDATE)
+ecbuild_bundle( PROJECT eccodes         GIT "git@github.com:ecmwf/eccodes"                   TAG rc_subh_v2.33.0_20231207 UPDATE)
+ecbuild_bundle( PROJECT eckit           GIT "git@github.com:ecmwf/eckit"                     TAG 1.25.0  UPDATE)
+ecbuild_bundle( PROJECT odc             GIT "git@github.com:ecmwf/odc"                       TAG release/1.5.0   UPDATE)
+ecbuild_bundle( PROJECT metkit          GIT "git@github.com:ecmwf/metkit"                    TAG 1.11.0_DE UPDATE)
 ecbuild_bundle( PROJECT atlas           GIT "ssh://git@git.ecmwf.int/atlas/atlas"            TAG 0.35.1  UPDATE)
 ecbuild_bundle( PROJECT mir             GIT "git@github.com:ecmwf/mir"                       TAG 1.18.1  UPDATE)
 ecbuild_bundle( PROJECT fdb5            GIT "ssh://git@git.ecmwf.int/mars/fdb5"              TAG 5.11.93 UPDATE)
