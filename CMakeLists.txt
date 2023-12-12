@@ -45,11 +45,11 @@ ecbuild_set_verbose( ENABLE_FORTRAN   OFF CACHE BOOL "Fortran option(s) disabled
 
 ecbuild_bundle( PROJECT eccodes         GIT "git@github.com:ecmwf/eccodes"                   TAG rc_subh_v2.33.0_20231207 UPDATE)
 ecbuild_bundle( PROJECT eckit           GIT "git@github.com:ecmwf/eckit"                     TAG 1.25.0  UPDATE)
-ecbuild_bundle( PROJECT odc             GIT "git@github.com:ecmwf/odc"                       TAG release/1.5.0   UPDATE)
+ecbuild_bundle( PROJECT odc             GIT "git@github.com:ecmwf/odc"                       TAG 1.5.0   UPDATE)
 ecbuild_bundle( PROJECT metkit          GIT "git@github.com:ecmwf/metkit"                    TAG 1.11.0_DE UPDATE)
 ecbuild_bundle( PROJECT atlas           GIT "ssh://git@git.ecmwf.int/atlas/atlas"            TAG 0.35.1  UPDATE)
 ecbuild_bundle( PROJECT mir             GIT "git@github.com:ecmwf/mir"                       TAG 1.18.1  UPDATE)
-ecbuild_bundle( PROJECT fdb5            GIT "ssh://git@git.ecmwf.int/mars/fdb5"              TAG 5.11.93 UPDATE)
+ecbuild_bundle( PROJECT fdb5            GIT "ssh://git@git.ecmwf.int/mars/fdb5"              TAG 5.11.94 UPDATE)
 ecbuild_bundle( PROJECT mars-client-cpp GIT "ssh://git@git.ecmwf.int/mars/mars-client-cpp"   TAG 6.99.0  UPDATE)
 
 ecbuild_bundle_finalize()
