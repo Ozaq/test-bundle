@@ -23,6 +23,7 @@ fdb
 grib_api
 libemos
 mars-client
+mars-client-cpp
 mars-server
 marskit
 metkit
