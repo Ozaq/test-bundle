@@ -11,6 +11,7 @@ pgen
 *~
 CMakeLists.txt.user*
 atlas
+atlas-orca
 bufrdc_tables
 build
 client
