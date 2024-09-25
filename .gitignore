@@ -11,6 +11,7 @@ pgen
 *~
 CMakeLists.txt.user*
 atlas
+atlas-orca
 bufrdc_tables
 build
 client
@@ -23,6 +24,7 @@ fdb
 grib_api
 libemos
 mars-client
+mars-client-cpp
 mars-server
 marskit
 metkit
