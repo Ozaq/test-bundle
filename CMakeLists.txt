@@ -51,6 +51,6 @@ ecbuild_bundle( PROJECT atlas           GIT "https://github.com/ecmwf/atlas"    
 ecbuild_bundle( PROJECT atlas-orca      GIT "https://github.com/ecmwf/atlas-orca"            TAG 0.4.0    UPDATE)
 ecbuild_bundle( PROJECT mir             GIT "https://github.com/ecmwf/mir"                   TAG 1.23.0   UPDATE)
 ecbuild_bundle( PROJECT fdb5            GIT "https://github.com/ecmwf/fdb"                   TAG 5.13.103 UPDATE)
-ecbuild_bundle( PROJECT mars-client     GIT "ssh://git@git.ecmwf.int/mars/mars-client"       TAG 6.99.3   UPDATE)
+ecbuild_bundle( PROJECT mars-client     GIT "git@github.com:ecmwf/mars-client-cpp"           TAG 6.99.3   UPDATE)
 
 ecbuild_bundle_finalize()
