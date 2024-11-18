@@ -37,6 +37,23 @@ endif()
 
 ########################################################################################################################
 
+option(ENABLE_AEC "Enable AEC" ON)
+
+if( ENABLE_AEC )
+
+    # Check system AEC. If less than 1.1.1 OR not found, we build our own
+    ecbuild_find_package( NAME AEC VERSION 1.1.1 )
+
+    if (AEC_VERSION VERSION_LESS 1.1.1 OR NOT AEC_VERSION)
+        message(STATUS "No suitable AEC found. Building from source.")
+        set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
+        set(AEC_LIBRARY "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libaec${CMAKE_SHARED_LIBRARY_SUFFIX}")
+        set(AEC_INCLUDE_DIR "${CMAKE_BINARY_DIR}/libaec/include")
+        ecbuild_bundle( PROJECT libaec GIT "https://gitlab.dkrz.de/k202009/libaec.git" TAG v1.1.2 UPDATE)
+    endif()
+
+endif()
+
 ecbuild_bundle_initialize()
 
 ecbuild_set_verbose( ENABLE_PKGCONFIG OFF CACHE BOOL "PkgConfig support disabled" ) # not needed for bundle
@@ -51,6 +68,9 @@ ecbuild_bundle( PROJECT atlas           GIT "https://github.com/ecmwf/atlas"    
 ecbuild_bundle( PROJECT atlas-orca      GIT "https://github.com/ecmwf/atlas-orca"            TAG 0.4.0    UPDATE)
 ecbuild_bundle( PROJECT mir             GIT "https://github.com/ecmwf/mir"                   TAG 1.23.0   UPDATE)
 ecbuild_bundle( PROJECT fdb5            GIT "https://github.com/ecmwf/fdb"                   TAG 5.13.3   UPDATE)
+if ( ENABLE_AEC )
+    ecbuild_bundle( PROJECT gribjump    GIT "https://github.com/ecmwf/gribjump"              TAG 0.7.1    UPDATE)
+endif()
 ecbuild_bundle( PROJECT mars-client     GIT "ssh://git@git.ecmwf.int/mars/mars-client"       TAG 6.33.20  UPDATE)
 
 ecbuild_bundle_finalize()
