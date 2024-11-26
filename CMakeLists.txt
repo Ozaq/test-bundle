@@ -37,20 +37,52 @@ endif()
 
 ########################################################################################################################
 
+option(ENABLE_AEC "Enable AEC" ON)
+
+if( ENABLE_AEC )
+
+    # Check system AEC. If less than 1.1.1 OR not found, we build our own
+    ecbuild_find_package( NAME AEC VERSION 1.1.1 )
+
+    if (AEC_VERSION VERSION_LESS 1.1.1 OR NOT AEC_VERSION)
+        message(STATUS "No suitable AEC found. Building from source.")
+        set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
+        set(AEC_LIBRARY "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libaec${CMAKE_SHARED_LIBRARY_SUFFIX}")
+        set(AEC_INCLUDE_DIR "${CMAKE_BINARY_DIR}/libaec/include")
+        ecbuild_bundle( PROJECT libaec GIT "https://gitlab.dkrz.de/k202009/libaec.git" TAG v1.1.2 UPDATE)
+    endif()
+
+endif()
+
 ecbuild_bundle_initialize()
 
 ecbuild_set_verbose( ENABLE_PKGCONFIG OFF CACHE BOOL "PkgConfig support disabled" ) # not needed for bundle
 ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )            # FIXME remove when lxg/ecgb can handle this
 ecbuild_set_verbose( ENABLE_FORTRAN   OFF CACHE BOOL "Fortran option(s) disabled" ) # only fortran left for libemos
 
+if(METKIT_CONFIGS_PATH)
+    ecbuild_set_verbose( ENABLE_METKIT_CONFIGS OFF CACHE BOOL "Use provided metkit_configs folder ${METKIT_CONFIGS_PATH}" )
+else()
+    if(NOT METKIT_CONFIGS_BRANCH)
+        set(METKIT_CONFIGS_BRANCH chk)
+    endif()
+    ecbuild_set_verbose( ENABLE_METKIT_CONFIGS ON CACHE BOOL "Fetch metkit_configs at bundle level" )
+    set(METKIT_CONFIGS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/metkit_configs")
+endif()
+
 ecbuild_bundle( PROJECT eccodes         GIT "https://github.com/ecmwf/eccodes"               TAG 2.38.3   UPDATE)
-ecbuild_bundle( PROJECT eckit           GIT "https://github.com/ecmwf/eckit"                 TAG 1.28.2   UPDATE)
+ecbuild_bundle( PROJECT eckit           GIT "https://github.com/ecmwf/eckit"                 TAG 1.28.3   UPDATE)
 ecbuild_bundle( PROJECT odc             GIT "https://github.com/ecmwf/odc"                   TAG 1.5.2    UPDATE)
-ecbuild_bundle( PROJECT metkit          GIT "https://github.com/ecmwf/metkit"                TAG 1.11.21  UPDATE)
+# ecbuild_bundle( PROJECT metkit_configs  GIT "https://github.com/ecmwf/metkit-configs"        BRANCH "${METKIT_CONFIGS_BRANCH}" UPDATE)
+ecbuild_bundle( PROJECT metkit          GIT "https://github.com/ecmwf/metkit"                BRANCH client_requests  UPDATE)
 ecbuild_bundle( PROJECT atlas           GIT "https://github.com/ecmwf/atlas"                 TAG 0.39.0   UPDATE)
 ecbuild_bundle( PROJECT atlas-orca      GIT "https://github.com/ecmwf/atlas-orca"            TAG 0.4.0    UPDATE)
 ecbuild_bundle( PROJECT mir             GIT "https://github.com/ecmwf/mir"                   TAG 1.23.0   UPDATE)
-ecbuild_bundle( PROJECT fdb5            GIT "https://github.com/ecmwf/fdb"                   TAG 5.13.104 UPDATE)
-ecbuild_bundle( PROJECT mars-client-cpp GIT "ssh://git@git.ecmwf.int/mars/mars-client-cpp"   TAG 7.0.0    UPDATE)
+ecbuild_bundle( PROJECT fdb5            GIT "https://github.com/ecmwf/fdb"                   TAG 5.13.3   UPDATE)
+if ( ENABLE_AEC )
+    ecbuild_bundle( PROJECT gribjump    GIT "https://github.com/ecmwf/gribjump"              TAG 0.7.1    UPDATE)
+endif()
+ecbuild_bundle( PROJECT mars-client     GIT "ssh://git@git.ecmwf.int/mars/mars-client"       TAG 6.33.20  UPDATE)
+
 
 ecbuild_bundle_finalize()
