@@ -79,9 +79,9 @@ ecbuild_bundle( PROJECT atlas           GIT "https://github.com/ecmwf/atlas"    
 ecbuild_bundle( PROJECT atlas-orca      GIT "https://github.com/ecmwf/atlas-orca"            TAG 0.4.0    UPDATE)
 ecbuild_bundle( PROJECT mir             GIT "https://github.com/ecmwf/mir"                   TAG 1.23.0   UPDATE)
 ecbuild_bundle( PROJECT fdb5            GIT "https://github.com/ecmwf/fdb"                   BRANCH remoteFDB UPDATE)
-if ( ENABLE_AEC )
-    ecbuild_bundle( PROJECT gribjump    GIT "https://github.com/ecmwf/gribjump"              TAG 0.7.1    UPDATE)
-endif()
+# if ( ENABLE_AEC )
+#     ecbuild_bundle( PROJECT gribjump    GIT "https://github.com/ecmwf/gribjump"              TAG 0.7.1    UPDATE)
+# endif()
 ecbuild_bundle( PROJECT mars-client-cpp GIT "ssh://git@git.ecmwf.int/mars/mars-client-cpp"   TAG 7.0.0    UPDATE)
 
 
