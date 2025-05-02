@@ -67,11 +67,11 @@ ecbuild_bundle( PROJECT metkit          GIT "https://github.com/ecmwf/metkit"   
 ecbuild_bundle( PROJECT atlas           GIT "https://github.com/ecmwf/atlas"                 TAG 0.40.0   UPDATE)
 ecbuild_bundle( PROJECT atlas-orca      GIT "https://github.com/ecmwf/atlas-orca"            TAG 0.4.0    UPDATE)
 ecbuild_bundle( PROJECT mir             GIT "https://github.com/ecmwf/mir"                   TAG 1.23.1   UPDATE)
-ecbuild_bundle( PROJECT fdb5            GIT "https://github.com/ecmwf/fdb"                   TAG 5.15.13  UPDATE)
+ecbuild_bundle( PROJECT fdb5            GIT "https://github.com/ecmwf/fdb"                   TAG 5.15.15  UPDATE)
 if ( ENABLE_AEC )
     ecbuild_bundle( PROJECT gribjump    GIT "https://github.com/ecmwf/gribjump"              TAG 0.9.3    UPDATE)
 endif()
-ecbuild_bundle( PROJECT mars-client-cpp GIT "git@github.com:ecmwf/mars-client-cpp.git"       TAG 7.1.0    UPDATE)
+ecbuild_bundle( PROJECT mars-client-cpp GIT "git@github.com:ecmwf/mars-client-cpp.git"       TAG 7.1.1    UPDATE)
 
 
 ecbuild_bundle_finalize()
