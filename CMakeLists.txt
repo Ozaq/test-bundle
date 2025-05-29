@@ -70,7 +70,7 @@ ecbuild_bundle( PROJECT fdb5            GIT "https://github.com/ecmwf/fdb"      
 if ( ENABLE_AEC )
     ecbuild_bundle( PROJECT gribjump    GIT "https://github.com/ecmwf/gribjump"              TAG 0.9.3    UPDATE)
 endif()
-ecbuild_bundle( PROJECT mars-client-cpp GIT "git@github.com:ecmwf/mars-client-cpp.git"       TAG 7.1.4    UPDATE)
+ecbuild_bundle( PROJECT mars-client-cpp GIT "git@github.com:ecmwf/mars-client-cpp.git"       BRANCH develop UPDATE)
 
 
 ecbuild_bundle_finalize()
