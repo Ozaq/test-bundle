@@ -7,7 +7,7 @@ build:
   dependencies:
     - ecmwf/ecbuild@develop
   cmake_options:
-    - -DGITHUB_CICD=1
+    - -DECMWF_HPC=1
   env:
     - INPUT_GITHUB_TOKEN=${GITHUB_TOKEN}
   sync_module: true

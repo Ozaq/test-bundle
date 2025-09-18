@@ -8,7 +8,7 @@ on:
     tags-ignore:
       - '**'
 
-  pull_request: ~
+  # pull_request: ~
 
   # for manual trigger
   workflow_dispatch: ~
