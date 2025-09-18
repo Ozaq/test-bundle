@@ -1,11 +1,12 @@
 name: CD (Nightly)
 
 on:
-  # push:
-  #   branches:
-  #     - "develop"
-  #   tags-ignore:
-  #     - '**'
+  push:
+    branches:
+      - "cpp"
+      - "feature/MARSC-413-nightly-builds"
+    tags-ignore:
+      - '**'
 
   pull_request: ~
 
