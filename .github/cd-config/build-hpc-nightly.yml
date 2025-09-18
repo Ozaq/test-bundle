@@ -1,0 +1,20 @@
+build:
+  parallel: 64
+  modules:
+    - ninja
+    - netcdf4
+    - aec
+  dependencies:
+    - ecmwf/ecbuild@develop
+  cmake_options:
+    - -DGITHUB_CICD=1
+  env:
+    - INPUT_GITHUB_TOKEN=${GITHUB_TOKEN}
+  sync_module: true
+  module_name: mars
+  install_type: module
+  site: aa-batch
+  prefix_compiler_specific: true
+  queue: deploy
+  # For nightly deployments
+  install_prefix: /usr/local/apps/mars/versions/nightly

@@ -1,0 +1,32 @@
+name: CD (Nightly)
+
+on:
+  # push:
+  #   branches:
+  #     - "develop"
+  #   tags-ignore:
+  #     - '**'
+
+  pull_request: ~
+
+  # for manual trigger
+  workflow_dispatch: ~
+
+jobs:
+  nexus:
+    uses: ecmwf/reusable-workflows/.github/workflows/create-package.yml@v2
+    secrets: inherit
+    with:
+      skip_checks: true
+      restrict_matrix_jobs: gnu@rocky-9.5
+      build_config: .github/cd-config/build-nightly.yml
+
+  hpc:
+    uses: ecmwf/reusable-workflows/.github/workflows/cd-module.yml@v2
+    secrets: inherit
+    with:
+      skip_checks: true
+      platforms: |
+        gnu-8.5.0
+        intel-2021.4.0
+      config_path: .github/cd-config/build-hpc-nightly.yml
