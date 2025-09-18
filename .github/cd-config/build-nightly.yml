@@ -1,0 +1,5 @@
+dependencies: |
+  ecmwf/ecbuild@develop
+  MathisRosenhauer/libaec@refs/tags/v1.1.3
+cmake_options: -DGITHUB_CICD=1 -DCPACK_PACKAGE_NAME=mars-nightly
+parallelism_factor: 8
