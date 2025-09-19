@@ -26,6 +26,11 @@ if( ECMWF )
     include( ecmwf.cmake OPTIONAL )
 endif()
 
+# for github nightly builds on ecmwf hpc
+if( ECMWF_HPC_NIGHTLY )
+	include( cmake/ecmwf-hpc-nightly.cmake OPTIONAL )
+endif()
+
 if( ECMWF_HPC )
 	set(ECMWF ON)
 	include( ecmwf-hpc-local-config.cmake OPTIONAL )
