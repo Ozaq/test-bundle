@@ -4,6 +4,7 @@ build:
     - ninja
     - netcdf4
     - aec
+    - eigen
   dependencies:
     - ecmwf/ecbuild@develop
   cmake_options:
