@@ -9,6 +9,7 @@ build:
     - ecmwf/ecbuild@develop
   cmake_options:
     - -DECMWF_HPC_NIGHTLY=1
+    - -DMIR_ENABLE_TESTS=OFF
   env:
     - INPUT_GITHUB_TOKEN=${GITHUB_TOKEN}
   sync_module: true
