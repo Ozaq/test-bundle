@@ -2,8 +2,13 @@ build:
   parallel: 64
   modules:
     - ninja
+    - ecbuild
+    - fftw
+    - eclib
     - netcdf4
+    - hdf5
     - aec
+    - proj
     - eigen
   dependencies:
     - ecmwf/ecbuild@develop
