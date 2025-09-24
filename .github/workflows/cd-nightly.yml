@@ -31,3 +31,6 @@ jobs:
         gnu-8.5.0
         intel-2021.4.0
       config_path: .github/cd-config/build-hpc-nightly.yml
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
