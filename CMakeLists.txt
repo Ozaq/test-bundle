@@ -74,7 +74,7 @@ ecbuild_bundle_initialize()
 ecbuild_set_verbose( ENABLE_PKGCONFIG OFF CACHE BOOL "PkgConfig support disabled" ) # not needed for bundle
 ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )            # FIXME remove when lxg/ecgb can handle this
 
-ecbuild_bundle( PROJECT eckit           GIT "https://github.com/ecmwf/eckit"                 TAG 1.31.4   UPDATE)
+ecbuild_bundle( PROJECT eckit           GIT "https://github.com/ecmwf/eckit"                 BRANCH develop UPDATE)
 ecbuild_bundle( PROJECT eccodes         GIT "https://github.com/ecmwf/eccodes"               TAG 2.41.1   UPDATE)
 ecbuild_bundle( PROJECT odc             GIT "https://github.com/ecmwf/odc"                   TAG 1.6.1    UPDATE)
 ecbuild_bundle( PROJECT metkit          GIT "https://github.com/ecmwf/metkit"                TAG 1.14.4   UPDATE)
