@@ -80,7 +80,7 @@ ecbuild_bundle( PROJECT odc             GIT "https://github.com/ecmwf/odc"      
 ecbuild_bundle( PROJECT metkit          GIT "https://github.com/ecmwf/metkit"                BRANCH develop UPDATE)
 ecbuild_bundle( PROJECT atlas           GIT "https://github.com/ecmwf/atlas"                 BRANCH develop UPDATE)
 ecbuild_bundle( PROJECT atlas-orca      GIT "https://github.com/ecmwf/atlas-orca"            BRANCH develop UPDATE)
-ecbuild_bundle( PROJECT mir             GIT "https://github.com/ecmwf/mir"                   TAG    1.23.4  UPDATE)
+ecbuild_bundle( PROJECT mir             GIT "https://github.com/ecmwf/mir"                   TAG    1.27.6  UPDATE)
 ecbuild_bundle( PROJECT fdb5            GIT "https://github.com/ecmwf/fdb"                   BRANCH develop UPDATE)
 if ( ENABLE_AEC )
     ecbuild_bundle( PROJECT gribjump    GIT "https://github.com/ecmwf/gribjump"              BRANCH develop UPDATE)
