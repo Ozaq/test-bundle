@@ -36,4 +36,4 @@ jobs:
         # disable concurrency to prevent rsync clashes
         concurrency:
             group: hpc-nightly
-            cancel-in-progress: true
+            cancel-in-progress: false
