@@ -10,8 +10,6 @@ build:
     - aec
     - proj
     - eigen
-  dependencies:
-    - ecmwf/ecbuild@develop
   cmake_options:
     - -DECMWF_HPC_NIGHTLY=1
     - -DMIR_ENABLE_TESTS=OFF
