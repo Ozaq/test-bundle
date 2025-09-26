@@ -2,7 +2,7 @@ build:
   parallel: 64
   modules:
     - ninja
-    - ecbuild
+    - ecbuild/3.11.0
     - fftw
     - eclib
     - netcdf4
