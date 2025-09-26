@@ -26,7 +26,6 @@ jobs:
         uses: ecmwf/reusable-workflows/.github/workflows/cd-module.yml@clean-nightly-builds
         secrets: inherit
         with:
-            clean_before_install: true
             skip_checks: true
             platforms: |
                 gnu-8.5.0

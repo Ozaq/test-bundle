@@ -22,6 +22,7 @@ build:
   sync_module: true
   module_name: mars
   install_type: module
+  clean_before_install: true
   site: aa-batch
   prefix_compiler_specific: true
   queue: deploy
