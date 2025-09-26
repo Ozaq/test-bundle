@@ -22,7 +22,6 @@ jobs:
             restrict_matrix_jobs: gnu@rocky-9.5
             build_config: .github/cd-config/build-nightly.yml
 
-    # hpc builds (gnu/intel)
     hpc:
         uses: ecmwf/reusable-workflows/.github/workflows/cd-module.yml@clean-nightly-builds
         secrets: inherit
