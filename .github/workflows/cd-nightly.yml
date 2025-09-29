@@ -8,22 +8,9 @@ on:
         tags-ignore:
             - "**"
 
-    # pull_request: ~
-
-    # for manual trigger
-    # workflow_dispatch: ~
-
 jobs:
-    nexus:
-        uses: ecmwf/reusable-workflows/.github/workflows/create-package.yml@v2
-        secrets: inherit
-        with:
-            skip_checks: true
-            restrict_matrix_jobs: gnu@rocky-9.5
-            build_config: .github/cd-config/build-nightly.yml
-
     hpc:
-        uses: ecmwf/reusable-workflows/.github/workflows/cd-module.yml@clean-nightly-builds
+        uses: ecmwf/reusable-workflows/.github/workflows/cd-module.yml@v4
         secrets: inherit
         with:
             skip_checks: true
