@@ -10,7 +10,8 @@ on:
 
 jobs:
     hpc:
-        uses: ecmwf/reusable-workflows/.github/workflows/cd-module.yml@v4
+        # todo: revert this after before PR merged
+        uses: ecmwf/reusable-workflows/.github/workflows/cd-module.yml@clean-nightly-builds
         secrets: inherit
         with:
             skip_checks: true
