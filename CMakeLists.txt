@@ -46,12 +46,11 @@ endif()
 ########################################################################################################################
 
 option(ENABLE_AEC "Enable AEC" ON)
+option(ENABLE_BUNDLED_DEPENDENCIES OFF)
 
-if( ENABLE_AEC )
-
+if( ENABLE_AEC AND NOT ENABLE_BUNDLED_DEPENDENCIES)
     # Check system AEC. If less than 1.1.1 OR not found, we build our own
     ecbuild_find_package( NAME AEC VERSION 1.1.1 )
-
     if (AEC_VERSION VERSION_LESS 1.1.1 OR NOT AEC_VERSION)
         message(STATUS "No suitable AEC found. Building from source.")
         set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
@@ -59,7 +58,6 @@ if( ENABLE_AEC )
         set(AEC_INCLUDE_DIR "${CMAKE_BINARY_DIR}/libaec/include")
         ecbuild_bundle( PROJECT libaec GIT "https://gitlab.dkrz.de/k202009/libaec.git" TAG v1.1.3 UPDATE)
     endif()
-
 endif()
 
 # this is for private repos. adds token to GitHub URLs only if the token environment variable exists
@@ -74,6 +72,7 @@ ecbuild_bundle_initialize()
 ecbuild_set_verbose( ENABLE_PKGCONFIG OFF CACHE BOOL "PkgConfig support disabled" ) # not needed for bundle
 ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )            # FIXME remove when lxg/ecgb can handle this
 
+ecbuild_bundle( PROJECT cxx-dependencies     GIT "${GITHUB_AUTH}github.com/ecmwf/cxx-dependencies"      BRANCH master UPDATE RECURSIVE)
 ecbuild_bundle( PROJECT eckit                GIT "https://github.com/ecmwf/eckit"                       TAG 1.32.2   UPDATE)
 ecbuild_bundle( PROJECT eccodes              GIT "https://github.com/ecmwf/eccodes"                     TAG 2.44.0   UPDATE)
 ecbuild_bundle( PROJECT odc                  GIT "https://github.com/ecmwf/odc"                         TAG 1.6.1    UPDATE)
