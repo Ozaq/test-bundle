@@ -74,14 +74,14 @@ ecbuild_bundle_initialize()
 ecbuild_set_verbose( ENABLE_PKGCONFIG OFF CACHE BOOL "PkgConfig support disabled" ) # not needed for bundle
 ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )            # FIXME remove when lxg/ecgb can handle this
 
-ecbuild_bundle( PROJECT eckit           GIT "https://github.com/ecmwf/eckit"                 TAG 1.31.4   UPDATE)
+ecbuild_bundle( PROJECT eckit           GIT "https://github.com/ecmwf/eckit"                 TAG 1.32.1   UPDATE)
 ecbuild_bundle( PROJECT eccodes         GIT "https://github.com/ecmwf/eccodes"               TAG 2.41.1   UPDATE)
 ecbuild_bundle( PROJECT odc             GIT "https://github.com/ecmwf/odc"                   TAG 1.6.1    UPDATE)
-ecbuild_bundle( PROJECT metkit          GIT "https://github.com/ecmwf/metkit"                TAG 1.14.4   UPDATE)
+ecbuild_bundle( PROJECT metkit          GIT "https://github.com/ecmwf/metkit"                TAG 1.15.1   UPDATE)
 ecbuild_bundle( PROJECT atlas           GIT "https://github.com/ecmwf/atlas"                 TAG 0.43.0   UPDATE)
 ecbuild_bundle( PROJECT atlas-orca      GIT "https://github.com/ecmwf/atlas-orca"            TAG 0.4.2    UPDATE)
-ecbuild_bundle( PROJECT mir             GIT "https://github.com/ecmwf/mir"                   TAG 1.23.4   UPDATE)
-ecbuild_bundle( PROJECT fdb5            GIT "https://github.com/ecmwf/fdb"                   TAG 5.17.4   UPDATE)
+ecbuild_bundle( PROJECT mir             GIT "https://github.com/ecmwf/mir"                   TAG 1.23.7   UPDATE)
+ecbuild_bundle( PROJECT fdb5            GIT "https://github.com/ecmwf/fdb"                   TAG 5.18.0   UPDATE)
 if ( ENABLE_AEC )
     ecbuild_bundle( PROJECT gribjump    GIT "https://github.com/ecmwf/gribjump"              TAG 0.9.3    UPDATE)
 endif()
