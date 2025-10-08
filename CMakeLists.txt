@@ -26,6 +26,14 @@ if( ECMWF )
     include( ecmwf.cmake OPTIONAL )
 endif()
 
+# for github nightly builds on ecmwf hpc
+if( ECMWF_HPC_NIGHTLY )
+	include( cmake/ecmwf-hpc-nightly.cmake OPTIONAL )
+endif()
+if( ECMWF_NEXUS_NIGHTLY )
+	include( cmake/ecmwf-nexus-nightly.cmake OPTIONAL )
+endif()
+
 if( ECMWF_HPC )
 	set(ECMWF ON)
 	include( ecmwf-hpc-local-config.cmake OPTIONAL )
@@ -54,6 +62,13 @@ if( ENABLE_AEC )
 
 endif()
 
+# this is for private repos. adds token to GitHub URLs only if the token environment variable exists
+if(DEFINED ENV{INPUT_GITHUB_TOKEN})
+    set(GITHUB_AUTH "https://$ENV{INPUT_GITHUB_TOKEN}@")
+else()
+    set(GITHUB_AUTH "ssh://git@")
+endif()
+
 ecbuild_bundle_initialize()
 
 ecbuild_set_verbose( ENABLE_PKGCONFIG OFF CACHE BOOL "PkgConfig support disabled" ) # not needed for bundle
@@ -70,7 +85,6 @@ ecbuild_bundle( PROJECT fdb5            GIT "https://github.com/ecmwf/fdb"      
 if ( ENABLE_AEC )
     ecbuild_bundle( PROJECT gribjump    GIT "https://github.com/ecmwf/gribjump"              TAG 0.10.2   UPDATE)
 endif()
-ecbuild_bundle( PROJECT mars-client-cpp GIT "ssh://git@git.ecmwf.int/mars/mars-client-cpp"   BRANCH hotfix/7.1.7   UPDATE)
-
+ecbuild_bundle( PROJECT mars-client-cpp GIT "${GITHUB_AUTH}github.com/ecmwf/mars-client-cpp"   BRANCH hotfix/7.1.7 UPDATE)
 
 ecbuild_bundle_finalize()

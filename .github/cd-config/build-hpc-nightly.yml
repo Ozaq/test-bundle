@@ -1,0 +1,28 @@
+build:
+  parallel: 64
+  modules:
+    - ninja
+    - ecbuild/3.12.0
+    - fftw
+    - eclib
+    - netcdf4
+    - hdf5
+    - aec
+    - proj
+    - eigen
+  cmake_options:
+    - -DECMWF_HPC_NIGHTLY=1
+    - -DMIR_ENABLE_TESTS=OFF
+    - -DATLAS_ENABLE_TESTS=OFF
+    - -DATLAS-ORCA_ENABLE_TESTS=OFF
+  env:
+    - INPUT_GITHUB_TOKEN=${GITHUB_TOKEN}
+  sync_module: true
+  module_name: mars
+  install_type: module
+  clean_before_install: true
+  site: aa-batch
+  prefix_compiler_specific: true
+  queue: deploy
+  # For nightly deployments
+  install_prefix: /usr/local/apps/mars-client/versions/nightly
