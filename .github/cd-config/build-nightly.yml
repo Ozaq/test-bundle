@@ -1,0 +1,5 @@
+dependencies: |
+  ecmwf/ecbuild@develop
+  MathisRosenhauer/libaec@refs/tags/v1.1.3
+cmake_options: -DECMWF_NEXUS_NIGHTLY=1 -DCPACK_PACKAGE_NAME=mars-nightly -DMIR_ENABLE_TESTS=OFF -DATLAS_ENABLE_TESTS=OFF -DATLAS-ORCA_ENABLE_TESTS=OFF
+parallelism_factor: 8
