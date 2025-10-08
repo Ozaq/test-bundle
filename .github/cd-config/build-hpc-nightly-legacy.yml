@@ -25,4 +25,4 @@ build:
   prefix_compiler_specific: true
   queue: deploy
   # For nightly deployments
-  install_prefix: /usr/local/apps/mars-client/versions/nightly
+  install_prefix: /usr/local/apps/mars/versions/nightly

@@ -7,14 +7,31 @@ on:
             - "feature/MARSC-413-nightly-builds"
         tags-ignore:
             - "**"
+    schedule:
+        - cron: "0 2 * * *"
 
 jobs:
-    hpc:
+    hpc-legacy:
         # todo: revert this after before PR merged
-        uses: ecmwf/reusable-workflows/.github/workflows/cd-module.yml@clean-nightly-builds
+        uses: ecmwf/reusable-workflows/.github/workflows/cd-module.yml@cd-module-add-ref-name
         secrets: inherit
         with:
             skip_checks: true
+            platforms: |
+                gnu-8.5.0
+                intel-2021.4.0
+            config_path: .github/cd-config/build-hpc-nightly.yml
+        # disable concurrency to prevent rsync clashes
+        concurrency:
+            group: hpc-nightly
+            cancel-in-progress: true
+    hpc:
+        # todo: revert this after before PR merged
+        uses: ecmwf/reusable-workflows/.github/workflows/cd-module.yml@cd-module-add-ref-name
+        secrets: inherit
+        with:
+            skip_checks: true
+            ref_name: develop-cpp
             platforms: |
                 gnu-8.5.0
                 intel-2021.4.0
