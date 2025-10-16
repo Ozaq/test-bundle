@@ -76,7 +76,7 @@ ecbuild_set_verbose( ENABLE_PYTHON    OFF CACHE BOOL "Python disabled" )        
 
 ecbuild_bundle( PROJECT eckit                GIT "https://github.com/ecmwf/eckit"                       TAG 1.32.2   UPDATE)
 ecbuild_bundle( PROJECT eccodes              GIT "https://github.com/ecmwf/eccodes"                     TAG 2.44.0   UPDATE)
-ecbuild_bundle( PROJECT odc                  GIT "https://github.com/ecmwf/odc"                         TAG 1.6.1    UPDATE)
+ecbuild_bundle( PROJECT odc                  GIT "https://github.com/ecmwf/odc"                         TAG 1.6.2    UPDATE)
 ecbuild_bundle( PROJECT metkit               GIT "https://github.com/ecmwf/metkit"                      TAG 1.15.2   UPDATE)
 ecbuild_bundle( PROJECT atlas                GIT "https://github.com/ecmwf/atlas"                       TAG 0.44.0   UPDATE)
 ecbuild_bundle( PROJECT atlas-orca           GIT "https://github.com/ecmwf/atlas-orca"                  TAG 0.4.3    UPDATE)
@@ -85,7 +85,7 @@ ecbuild_bundle( PROJECT fdb5                 GIT "https://github.com/ecmwf/fdb" 
 if ( ENABLE_AEC )
     ecbuild_bundle( PROJECT gribjump         GIT "https://github.com/ecmwf/gribjump"                    TAG 0.10.2   UPDATE)
 endif()
-ecbuild_bundle( PROJECT polytope-client      GIT "${GITHUB_AUTH}github.com/ecmwf/polytope-client-rust"  BRANCH main UPDATE)
-ecbuild_bundle( PROJECT mars-client-cpp      GIT "${GITHUB_AUTH}github.com/ecmwf/mars-client-cpp"       BRANCH hotfix/7.1.7 UPDATE)
+ecbuild_bundle( PROJECT polytope-client      GIT "${GITHUB_AUTH}github.com/ecmwf/polytope-client-rust"  TAG 0.0.1    UPDATE)
+ecbuild_bundle( PROJECT mars-client-cpp      GIT "${GITHUB_AUTH}github.com/ecmwf/mars-client-cpp"       TAG 7.1.7    UPDATE)
 
 ecbuild_bundle_finalize()
