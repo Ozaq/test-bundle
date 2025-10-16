@@ -86,6 +86,6 @@ if ( ENABLE_AEC )
     ecbuild_bundle( PROJECT gribjump         GIT "https://github.com/ecmwf/gribjump"                    TAG 0.10.2   UPDATE)
 endif()
 ecbuild_bundle( PROJECT polytope-client      GIT "${GITHUB_AUTH}github.com/ecmwf/polytope-client-rust"  TAG 0.0.1    UPDATE)
-ecbuild_bundle( PROJECT mars-client-cpp      GIT "${GITHUB_AUTH}github.com/ecmwf/mars-client-cpp"       TAG 7.1.7    UPDATE)
+ecbuild_bundle( PROJECT mars-client-cpp      GIT "${GITHUB_AUTH}github.com/ecmwf/mars-client-cpp"       BRANCH hotfix/7.1.8    UPDATE)
 
 ecbuild_bundle_finalize()
