@@ -1,0 +1,62 @@
+name: Build Mars Client C++
+
+on:
+  workflow_call:
+    inputs:
+      ref:
+        description: 'Branch/tag/commit to build'
+        required: false
+        type: string
+        default: 'develop'
+    secrets:
+      GH_REPO_READ_TOKEN:
+        required: true
+jobs:
+  build-on-self-hosted:
+    strategy:
+      matrix:
+        runner: 
+          - [self-hosted, platform-builder-debian-11]
+          - [self-hosted, platform-builder-ubuntu-22.04]
+          - [self-hosted, platform-builder-rocky-8.6]
+          - [self-hosted, platform-builder-fedora-37]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          repository: ecmwf/mars-client-bundle
+          ref: cpp
+          path: bundle
+          token: ${{ secrets.GH_REPO_READ_TOKEN }}
+
+      - uses: actions/checkout@v5
+        with:
+          repository: ecmwf/ecbuild
+          ref: develop
+          path: ecbuild
+          token: ${{ secrets.GH_REPO_READ_TOKEN }}
+      
+      - name: Configure
+        run: |
+          git config --global url."https://${{ secrets.GH_REPO_READ_TOKEN }}@github.com/".insteadOf "git@github.com:"
+          git config --global url."https://${{ secrets.GH_REPO_READ_TOKEN }}@github.com/".insteadOf "ssh://git@github.com/"
+          mkdir build
+          cmake \
+            -S bundle \
+            -B build \
+            -DENABLE_BUNDLED_DEPENDENCIES=ON
+
+      - name: Checkout ref in folders
+        run: |
+          cd bundle
+          FOLDERS=(eckit eccodes odc metkit atlas atlas-orca mir fdb5 gribjump polytope-client mars-client-cpp)
+          for dir in "${FOLDERS[@]}"; do
+            [ -d "$dir" ] && (cd "$dir" && git checkout ${{ inputs.ref }} || true)
+          done
+      - name: Build
+        run: |
+          cmake --build build -j
+      - name: Test
+        run: |
+          cd build
+          ctest -j2
